@@ -67,7 +67,7 @@
 [class*=" icon-"]:before {
     text-decoration: inherit;
     display: inline-block;
-    speak: none
+    /* speak: none; */
 }
 
 a [class^="icon-"],

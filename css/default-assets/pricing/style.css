@@ -1105,22 +1105,22 @@ ul.tabs-vertical-frame li a span {
 }
 
 ul.tabs-vertical-frame li a span {
-    position: relative\0/;
-    z-index: 1\0/;
+    position: relative;
+    z-index: 1;
 }
 
 .portfolio .image-overlay a.zoom,
 .portfolio .image-overlay a.link,
 ul.products li .product-thumb .product-overlay a,
 .portfolio .image-overlay a span {
-    z-index: -1\0/;
+    z-index: -1;
 }
 
 .portfolio:hover .image-overlay a.zoom,
 .portfolio:hover .image-overlay a.link,
 ul.products li .product-thumb:hover .product-overlay a,
 .portfolio:hover .image-overlay a span {
-    z-index: 1\0/;
+    z-index: 1;
 }
 
 
@@ -1178,7 +1178,7 @@ ul.products li .product-thumb:hover .product-overlay a,
 #main-menu ul li {
     display: inline-block;
     padding: 0;
-    float: left;
+    /* float: left; */
 }
 
 #main-menu ul a {
@@ -1287,7 +1287,7 @@ ul.products li .product-thumb:hover .product-overlay a,
 
 .service {
     border-top: 5px solid #dcdbe1;
-    float: left;
+    /* float: left; */
     display: inline-block;
     padding: 40px 10px;
     position: relative;
@@ -1561,7 +1561,7 @@ figure img {
     border-bottom-left-radius: 0px;
     padding: 11px 20px 12px;
     min-height: 47px;
-    min-height: 22px\0/;
+    min-height: 22px;
     *min-height: 45px;
     *height: 0;
     margin: 0px;
@@ -1651,7 +1651,7 @@ input.error {
     font-family: 'Titillium Web', sans-serif;
     line-height: 32px !important;
     top: 21% !important;
-    top: 21%\0/ !important;
+    top: 21% !important;
 }
 
 .progress-bar-wrapper #donutchart1 div span {
@@ -1728,7 +1728,7 @@ input.error {
     position: absolute;
     top: 32%;
     left: 42%;
-    left: 42%\0/;
+    left: 42%;
     *left: 39%;
 }
 
