@@ -23,7 +23,7 @@
                     <section id="pricing" class="content">
                         <div class="main-title">
                             <div class="container">
-                                <h2 class="text-center">Subscription Plans</h2>
+                                <h2>Subscription Plans</h2>
                                 <p>We bring you the best pricing plan for you</p>
                             </div>
                         </div>
@@ -35,7 +35,7 @@
                                             <div class="tb-title">
                                                 <h5>High</h5>
                                             </div>
-                                            <div class="price"> $40 <span> Per Month</span> </div>
+                                            <div class="price"> ₱2,000 <span> Per Month</span> </div>
                                             <div class="guarantee">
                                                 <p>Money back Gurantee</p>
                                             </div>
@@ -58,7 +58,7 @@
                                             <div class="tb-title">
                                                 <h5>Medium</h5>
                                             </div>
-                                            <div class="price"> $30 <span> Per Month</span> </div>
+                                            <div class="price"> ₱1,500 <span> Per Month</span> </div>
                                             <div class="guarantee">
                                                 <p>Money back Gurantee</p>
                                             </div>
@@ -81,7 +81,7 @@
                                             <div class="tb-title">
                                                 <h5>Basic</h5>
                                             </div>
-                                            <div class="price"> $20 <span> Per Month</span> </div>
+                                            <div class="price"> ₱1,000 <span> Per Month</span> </div>
                                             <div class="guarantee">
                                                 <p>Money back Gurantee</p>
                                             </div>

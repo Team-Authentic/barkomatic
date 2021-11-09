@@ -132,10 +132,16 @@ h4.border-title {
 
 .main-title h2 {
     color: #fff;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.4);
     font-weight: 300;
     font-size: 50px;
     line-height: 50px;
     margin: 0px;
+}
+
+.main-title p {
+    color: #fff;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.4);
 }
 
 

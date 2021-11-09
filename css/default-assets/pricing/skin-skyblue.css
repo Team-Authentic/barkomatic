@@ -42,7 +42,7 @@ ul.tabs-vertical-frame li.current a,
 .mean-container a.meanmenu-reveal {
     background: #35aad8;
     *background: #35aad8;
-    background: #35aad8\0/;
+    background: #35aad8;
 }
 
 .copyright .social-media li a {
@@ -211,13 +211,13 @@ ul.tabs-vertical-frame li,
 
 .image-overlay {
     background: rgba(53, 170, 216, 0.9);
-    background: #35aad8\0/;
+    background: #35aad8;
     *background: #35aad8;
 }
 
 .portfolio:hover .portfolio-detail {
     background: rgba(53, 170, 216, 0.9);
-    background: #35aad8\0/;
+    background: #35aad8;
     *background: #35aad8;
 }
 

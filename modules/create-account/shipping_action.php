@@ -19,7 +19,7 @@ function SignupShipping($con) {
         echo 'Password did not match!';
         exit();
     }else{
-        $stmt_sql_select_query = $con->prepare("SELECT shipping_name,email,phone,username FROM shipping WHERE shipping_name=? OR email=? OR phone=? OR username=?");
+        $stmt_sql_select_query = $con->prepare("SELECT shipping_name,email,phone,username FROM shipping_owner WHERE shipping_name=? OR email=? OR phone=? OR username=?");
         $stmt_sql_select_query->bind_param('ssis', $scn,$email,$tel,$uname);
         $stmt_sql_select_query->execute();
         $result = $stmt_sql_select_query->get_result();
