@@ -5,7 +5,7 @@ $(document).ready(function() {
             e.preventDefault();
             $('#login').attr('disabled', true);
             $.ajax({
-                url: './modules/login-logout/login_action.php',
+                url: './modules/login-logout/login_sh_owner_action.php',
                 method: 'post',
                 data: $('#login-form').serialize() + '&action=login',
                 success: function(res) {

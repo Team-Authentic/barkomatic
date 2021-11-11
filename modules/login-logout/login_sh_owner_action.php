@@ -10,7 +10,7 @@ if(isset($_POST['action']) && $_POST['action'] == 'login') {
 function ShippingOnwer($con) {
     $email = $_POST['email'];
     $password = sha1($_POST['password']);
-    $stmt_sql_login_query = $con->prepare("SELECT * FROM shipping WHERE email=? AND password=?");
+    $stmt_sql_login_query = $con->prepare("SELECT * FROM shipping_owner WHERE email=? AND password=?");
     $stmt_sql_login_query->bind_param('ss', $email,$password);
     $stmt_sql_login_query->execute();
     $owner = $stmt_sql_login_query->fetch();

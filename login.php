@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,22 +15,69 @@
 </head>
 
 <body class="bg-light">
-    <div class="container register rounded border shadow-lg">
-      
+    <div class="container register rounded border shadow-lg mt-0 pt-0">
         <div class="row">
-            <div class="col-md-3 register-left">
+            <div class="col-md-12 register-left">
                 <a href="index.php">
-                    <img src="img/core-img/logoq.png" alt="" width="600">
+                    <img src="img/core-img/logoq.png" alt="" width="200" class="mt-0 mb-0" style="width: 150px;">
                 </a>
-                <h3>Welcome</h3>
-                <a href="signup.php"><input type="submit" name="" value="Register"></a>
-                <br>
+                <h3 class="mb-5">Welcome</h3>
             </div>
-            <div class="col-md-9 register-right">
+        </div>
+        <div class="row">
+            <div class="col-md-12 register-right">
+                <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="false">Passenger</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active show" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="true">Shipping Owner</a>
+                    </li>
+                </ul>
                 <div class="tab-content container" id="myTabContent">
-                    <!-- Apply as a Company Start -->
-                    <div class="tab-pane fade-out active show container" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                        <h3 class="register-heading"><i class="fa fa-lock"></i> Login</h3>
+                    <!-- Login as Shipping Owner Start -->
+                    <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <h3 class="register-heading"><i class="fa fa-lock"></i> Login as Passenger</h3>
+                        <div class="alert alert-success lead ml-5 p-2" role="alert" id="alert">
+                            <span id="res-icon"></span>
+                            <span id="res-message"></span>
+                        </div>
+                        <div class="row register-form container">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <form id="login-form-passenger">
+                                            <div class="form-group input-group">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text"><span class="icon is-small left"><i class="fa fa-user small"></i></span></div>
+                                                </div>
+                                                <input type="email" name="email-passenger" id="email-passenger" class="form-control" placeholder="Email *" value="" required>
+                                            </div>
+                                            <div class="form-group input-group">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text"><span class="icon is-small left"><i class="fa fa-asterisk small"></i></span></div>
+                                                </div>
+                                                <input type="password" name="password-passenger" id="password-passenger" class="form-control" placeholder="Password *" value="" required>
+                                            </div>
+                                            <input type="submit" name="login" id="login-passenger" class="btnRegister float-left mt-3 btn btn-sm text-white" value="Login">
+                                            <a href="forgot.html" class="">
+                                                <input type="button" id="forgot-pass-passenger" class="btnRegister float-left mt-3 btn btn-sm bg-transparent text-dark" value="Forgot password?">
+                                            </a>
+                                        </form>
+                                    </div>
+                                    <div class="row mt-5">
+                                        <div class="col-sm-12 text-center">
+                                            <p class="lead"><a href="signup.php"><small>Not have an account yet?</small></a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Login as Shipping Owner End -->
+                     <!-- Login as Passenger Start -->
+                     <div class="tab-pane fade-out active show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <h3 class="register-heading"><i class="fa fa-lock"></i> Login as Shipping Owner</h3>
                         <div class="alert alert-success lead ml-5 p-2" role="alert" id="alert">
                             <span id="res-icon"></span>
                             <span id="res-message"></span>
@@ -53,24 +101,30 @@
                                             </div>
                                             <input type="submit" name="login" id="login" class="btnRegister float-left mt-3 btn btn-sm text-white" value="Login">
                                             <a href="forgot.html" class="">
-                                                <input type="button" class="btnRegister float-left mt-3 btn btn-sm bg-transparent text-dark" value="Forgot password?">
+                                                <input type="button" id="forgot-pass-sh-owner" class="btnRegister float-left mt-3 btn btn-sm bg-transparent text-dark" value="Forgot password?">
                                             </a>
                                         </form>
+                                    </div>
+                                    <div class="row mt-5">
+                                        <div class="col-sm-12 text-center">
+                                            <p class="lead"><a href="signup.php"><small>Not have an account yet?</small></a></p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Apply as a Company End -->
+                    <!-- Login as Passenger End -->
                 </div>
             </div>
         </div>
     </div>
-    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/default-assets/pricing/jquery-1.10.2.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
-    <script src="js/default-assets/login/login.js"></script>
+    <script src="js/default-assets/login/login_sh_owner.js"></script>
+    <script src="js/default-assets/login/login_passenger.js"></script>
 </body>
 
 </html>
