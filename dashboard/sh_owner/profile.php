@@ -32,6 +32,7 @@
         </section>
         <!-- Dashboard Hero Bar End -->
 
+        <!-- Dashboard Main Section Start -->
         <section class="section main-section">
             <div class="grid grid-cols-1 gap-6 lg:grid-cols-2 mb-6">
                 <div class="card">
@@ -82,8 +83,8 @@
                             <div class="field">
                                 <div class="control">
                                     <button type="submit" class="button green">
-                                Submit
-                                </button>
+                                    Submit
+                                    </button>
                                 </div>
                             </div>
                         </form>
@@ -150,14 +151,15 @@
                         <div class="field">
                             <div class="control">
                                 <button type="submit" class="button green">
-                Submit
-              </button>
+                                    Submit
+                                </button>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
         </section>
+        <!-- Dashboard Main Section End -->
 
         <!-- Dashboard Footer Start -->
         <?php require "./resources/templates/_dashboard-footer.php"; ?>

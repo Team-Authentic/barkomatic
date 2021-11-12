@@ -2,135 +2,14 @@
 <html lang="en" class="">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dashboard</title>
-
-    <!-- Tailwind is included -->
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png" />
-    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.9.95/css/materialdesignicons.min.css">
+    <?php require "./resources/templates/_dashboard-head.php"; ?>
 </head>
 
 <body>
     <div id="app">
-        <nav id="navbar-main" class="navbar is-fixed-top">
-            <div class="navbar-brand">
-                <a class="navbar-item mobile-aside-button">
-                    <span class="icon"><i class="mdi mdi-forwardburger mdi-24px"></i></span>
-                </a>
-                <div class="navbar-item">
-                    <div class="control"><input placeholder="Search everywhere..." class="input"></div>
-                </div>
-            </div>
-            <div class="navbar-brand is-right">
-                <a class="navbar-item --jb-navbar-menu-toggle" data-target="navbar-menu">
-                    <span class="icon"><i class="mdi mdi-dots-vertical mdi-24px"></i></span>
-                </a>
-            </div>
-            <div class="navbar-menu" id="navbar-menu">
-                <div class="navbar-end">
-                    <div class="navbar-item dropdown has-divider has-user-avatar">
-                        <a class="navbar-link">
-                            <div class="user-avatar">
-                                <img src="https://avatars.dicebear.com/v2/initials/john-doe.svg" alt="John Doe" class="rounded-full">
-                            </div>
-                            <div class="is-user-name"><span>2GO</span></div>
-                            <span class="icon"><i class="mdi mdi-chevron-down"></i></span>
-                        </a>
-                        <div class="navbar-dropdown">
-                            <a class="navbar-item">
-                                <span class="icon"><i class="mdi mdi-bell-ring"></i></span>
-                                <span>Notifications</span>
-                            </a>
-                            <a class="navbar-item" href="../../index.html">
-                                <span class="icon"><i class="mdi mdi-logout"></i></span>
-                                <span>Logout</span>
-                            </a>
-                            <hr class="navbar-divider">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
+        <?php require "./resources/templates/_dashboard-top-nav.php"; ?>
 
-        <aside class="aside is-placed-left is-expanded">
-            <div class="aside-tools">
-                <div>
-                    Barko <b class="font-black">Matic</b>
-                </div>
-            </div>
-            <div class="menu is-menu-main">
-                <p class="menu-label">General</p>
-                <ul class="menu-list">
-                    <li class="active">
-                        <a href="index.html">
-                            <span class="icon"><i class="mdi mdi-desktop-mac"></i></span>
-                            <span class="menu-item-label">Dashboard</span>
-                        </a>
-                    </li>
-                </ul>
-                <p class="menu-label">Accounts</p>
-                <ul class="menu-list">
-                    <li class="--set-active-tables-html">
-                        <a href="#" class="dropdown">
-                            <span class="icon"><i class="mdi mdi-table"></i></span>
-                            <span class="menu-item-label">Employee</span>
-                            <span class="icon"><i class="mdi mdi-plus"></i></span>
-                        </a>
-                        <ul>
-                            <li>
-                                <a href="#void">
-                                    <span>Assign Task (Role)</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul class="menu-list">
-                    <li class="--set-active-tables-html">
-                        <a href="#" class="dropdown">
-                            <span class="icon"><span class="mdi mdi-account-group"></span></span>
-                            <span class="menu-item-label">Customer</span>
-                        </a>
-                    </li>
-                </ul>
-                <p class="menu-label">Subscription</p>
-                <ul class="menu-list">
-                    <li class="--set-active-tables-html">
-                        <a href="#" class="dropdown">
-                            <span class="icon"><i class="fa fa-calendar"></i></span>
-                            <span class="menu-item-label">My Subscription</span>
-                        </a>
-                    </li>
-                </ul>
-                <p class="menu-label">Ticket</p>
-                <ul class="menu-list">
-                    <li>
-                        <a href="https://justboil.me" target="_blank" class="has-icon">
-                            <span class="icon"><i class="mdi mdi-sale"></i></span>
-                            <span class="menu-item-label">Discounts</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://justboil.me/tailwind-admin-templates" class="has-icon">
-                            <span class="icon"><i class="mdi mdi-tag-multiple"></i></span>
-                            <span class="menu-item-label">Promo</span>
-                        </a>
-                    </li>
-                </ul>
-                <p class="menu-label">My Profile</p>
-                <ul class="menu-list">
-                    <li class="--set-active-profile-html">
-                        <a href="profile.html">
-                            <span class="icon"><i class="mdi mdi-settings"></i></span>
-                            <span class="menu-item-label">Settings</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </aside>
+        <?php require "./resources/templates/_dashboard-aside-nav.php"; ?>
 
         <section class="is-hero-bar">
             <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
@@ -147,7 +26,7 @@
                         <div class="flex items-center justify-between">
                             <div class="widget-label">
                                 <h3>
-                                    Customer
+                                    Users
                                 </h3>
                                 <h1>
                                     512
@@ -162,7 +41,7 @@
                         <div class="flex items-center justify-between">
                             <div class="widget-label">
                                 <h3>
-                                    Sales
+                                    Monthly Income
                                 </h3>
                                 <h1>
                                     $7,770
@@ -515,6 +394,8 @@
             </div>
         </section>
 
+        <?php require "./resources/templates/_dashboard-footer.php"; ?>
+        
         <div id="sample-modal" class="modal">
             <div class="modal-background --jb-modal-close"></div>
             <div class="modal-card">
@@ -549,13 +430,11 @@
             </div>
         </div>
     </div>
-    <footer>
-        <p class="lead">Powered by Barkomatic</p>
-    </footer>
-    <!-- Scripts below are for demo only -->
-    <script type="text/javascript" src="js/main.min.js?v=1628755089081"></script>
+    
+
+    <script type="text/javascript" src="resources/js/main.min.js?v=1628755089081"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
-    <script type="text/javascript" src="js/chart.sample.min.js"></script>
+    <script type="text/javascript" src="resources/js/chart.sample.min.js"></script>
 </body>
 
 </html>

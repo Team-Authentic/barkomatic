@@ -3,13 +3,7 @@
 <html lang="en" class="">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dashboard - <?php echo $_SESSION['shipping_name']; ?></title>
-    <link rel="stylesheet" href="resources/css/main.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png" />
-    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.9.95/css/materialdesignicons.min.css">
+    <?php require "./resources/templates/_dashboard-head.php"; ?>
 </head>
 
 <body>
@@ -55,7 +49,7 @@
                         <div class="flex items-center justify-between ">
                             <div class="widget-label ">
                                 <h3>
-                                    Sales
+                                    Monthly Income
                                 </h3>
                                 <h1>
                                     $7,770
@@ -78,6 +72,32 @@
                                 </h1>
                             </div>
                             <span class="icon widget-icon text-red-500 "><i class="mdi mdi-finance mdi-48px "></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-6">
+                <header class="card-header">
+                    <p class="card-header-title">
+                        <span class="icon"><i class="mdi mdi-finance"></i></span> Performance
+                    </p>
+                    <a href="#" class="card-header-icon">
+                        <span class="icon"><i class="mdi mdi-reload"></i></span>
+                    </a>
+                </header>
+                <div class="card-content">
+                    <div class="chart-area">
+                        <div class="h-full">
+                            <div class="chartjs-size-monitor">
+                                <div class="chartjs-size-monitor-expand">
+                                    <div></div>
+                                </div>
+                                <div class="chartjs-size-monitor-shrink">
+                                    <div></div>
+                                </div>
+                            </div>
+                            <canvas id="big-line-chart" width="2992" height="1000" class="chartjs-render-monitor block" style="height: 400px; width: 1197px;"></canvas>
                         </div>
                     </div>
                 </div>
@@ -388,8 +408,9 @@
         <!-- Dashboard Footer End -->
     </div>
 
-    <script type="text/javascript " src="resources/js/main.min.js"></script>
-    <script type="text/javascript " src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js "></script>
+    <script type="text/javascript" src="resources/js/main.min.js?v=1628755089081"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <script type="text/javascript" src="resources/js/chart.sample.min.js"></script>
 </body>
 
 </html>

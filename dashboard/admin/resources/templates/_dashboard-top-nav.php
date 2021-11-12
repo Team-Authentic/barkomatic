@@ -17,9 +17,9 @@
             <div class="navbar-item has-divider has-user-avatar">
                 <a class="navbar-link">
                     <div class="user-avatar">
-                        <img src="./resources/img/owner_logo/<?php echo $_SESSION['profile_image']; ?>" alt="<?php echo $_SESSION['shipping_name']; ?>" class="rounded-full">
+                        <img src="https://avatars.dicebear.com/v2/initials/john-doe.svg" alt="John Doe" class="rounded-full">
                     </div>
-                    <div class="is-user-name"><span><?php echo $_SESSION['username']; ?></span></div>
+                    <div class="is-user-name"><span>Admin</span></div>
                 </a>
             </div>
         </div>
