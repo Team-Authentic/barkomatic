@@ -1,39 +1,40 @@
 $(document).ready(function() {
-    $('#login-form').validate();
-    $('#login').click(function(e) {
-        if (document.querySelector('#login-form').checkValidity()) {
+    $('#login-showner-form').validate();
+    $('#login-showner-btn').click(function(e) {
+        if (document.querySelector('#login-showner-form').checkValidity()) {
             e.preventDefault();
-            $('#login').attr('disabled', true);
+            $('#login-showner-btn').attr('disabled', true);
             $.ajax({
                 url: './modules/login-logout/login_sh_owner_action.php',
                 method: 'post',
-                data: $('#login-form').serialize() + '&action=login',
+                data: $('#login-showner-form').serialize() + '&action=login-showner-btn',
                 success: function(res) {
+                    $('#res-message').html(res);
                     if (res === "Login Successfully!") {
-                        $('#res-icon').val("");
-                        $('#res-message').html("");
+                        $('#res-icon-showner').val("");
+                        $('#res-message-showner').html("");
                         $('.alert').removeClass('alert-danger');
                         $('.alert').addClass('alert-success');
-                        $('#res-icon').html("<i class='fa fa-check-circle'></i>");
-                        $('#res-message').html("Login Successfully!");
+                        $('#res-icon-showner').html("<i class='fa fa-check-circle'></i>");
+                        $('#res-message-showner').html("Login Successfully!");
                         $('.alert').show(80);
                         setTimeout(function() {
                             $('.alert').fadeOut();
                             window.location = 'profile.php';
                         }, 2000);
                     } else {
-                        $('#res-icon').val("");
-                        $('#res-message').html("");
+                        $('#res-icon-showner').val("");
+                        $('#res-message-showner').html("");
                         $('.alert').removeClass('alert-success');
                         $('.alert').addClass('alert-danger');
-                        $('#res-icon').html("<i class='fa fa-exclamation-circle'></i>");
-                        $('#res-message').html("Login failed! Please check your email and password!");
+                        $('#res-icon-showner').html("<i class='fa fa-exclamation-circle'></i>");
+                        $('#res-message-showner').html("Login failed! Please check your email and password.");
                         $('.alert').show(80);
                         setTimeout(function() {
                             $('.alert').fadeOut();
                         }, 2000);
                     }
-                    $('#login').attr('disabled', false);
+                    $('#login-showner-btn').attr('disabled', false);
                 }
             });
             return true;

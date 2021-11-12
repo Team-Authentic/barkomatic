@@ -37,9 +37,18 @@
                     </div>
                     <div class="col-6">
                         <div class="top-header-content">
-                            <button type="button" class="btn btn-success ml-auto" id="btn-su">
-                                <a href="login.php" class="text-white" id="login-link">Login</a>&nbsp; <span>|</span> &nbsp;<a href="signup.php" class="text-white" id="signup-link">Signup</a>
-                            </button>
+                            <a href="#" class="invisible"><i class="icon_mail"></i> <span>barkomatic2021@gmail.com</span></a>
+                            <?php 
+                                session_start();
+                                if(isset($_SESSION['shipping_name']) && isset($_SESSION['profile_image']) && isset($_SESSION['username'])) { ?>
+                                    <button type="button" class="btn btn-success ml-auto" id="btn-su">
+                                        <a href="login.php" class="text-white" id="login-link">Go to Dashboard</a>
+                                    </button>
+                              <?php } else { ?>
+                                    <button type="button" class="btn btn-success ml-auto" id="btn-su">
+                                        <a href="login.php" class="text-white" id="login-link">Login</a>&nbsp; <span>|</span> &nbsp;<a href="signup.php" class="text-white" id="signup-link">Signup</a>
+                                    </button>
+                              <?php } ?>
                         </div>
                     </div>
                 </div>

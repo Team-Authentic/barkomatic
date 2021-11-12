@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en" class="">
 
@@ -5,129 +6,23 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dashboard - 2GO</title>
-    <link rel="stylesheet" href="css/main.css">
+    <title>Dashboard - <?php echo $_SESSION['shipping_name']; ?></title>
+    <link rel="stylesheet" href="resources/css/main.css">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png" />
     <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.9.95/css/materialdesignicons.min.css">
 </head>
 
 <body>
     <div id="app">
-        <nav id="navbar-main" class="navbar is-fixed-top">
-            <div class="navbar-brand">
-                <a class="navbar-item mobile-aside-button">
-                    <span class="icon"><i class="mdi mdi-forwardburger mdi-24px"></i></span>
-                </a>
-                <div class="navbar-item">
-                    <div class="control"><input placeholder="Search everywhere..." class="input"></div>
-                </div>
-            </div>
-            <div class="navbar-brand is-right">
-                <a class="navbar-item --jb-navbar-menu-toggle" data-target="navbar-menu">
-                    <span class="icon"><i class="mdi mdi-dots-vertical mdi-24px"></i></span>
-                </a>
-            </div>
-            <div class="navbar-menu" id="navbar-menu">
-                <div class="navbar-end">
-                    <div class="navbar-item dropdown has-divider has-user-avatar">
-                        <a class="navbar-link">
-                            <div class="user-avatar">
-                                <img src="https://avatars.dicebear.com/v2/initials/john-doe.svg" alt="John Doe" class="rounded-full">
-                            </div>
-                            <div class="is-user-name"><span>2GO</span></div>
-                            <span class="icon"><i class="mdi mdi-chevron-down"></i></span>
-                        </a>
-                        <div class="navbar-dropdown">
-                            <a class="navbar-item">
-                                <span class="icon"><i class="mdi mdi-bell-ring"></i></span>
-                                <span>Notifications</span>
-                            </a>
-                            <a class="navbar-item" href="../../index.html">
-                                <span class="icon"><i class="mdi mdi-logout"></i></span>
-                                <span>Logout</span>
-                            </a>
-                            <hr class="navbar-divider">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
+        <!-- Dashboard Nav Top Start -->
+            <?php require "./resources/templates/_dashboard-top-nav.php"; ?>
+        <!-- Dashboard Nav Top Start -->
 
-        <aside class="aside is-placed-left is-expanded">
-            <div class="aside-tools">
-                <div class="navbar-brand">
-                    <img src="img/owner_logo/2GO.png" alt="">
-                </div>
-            </div>
-            <div class="menu is-menu-main ">
-                <p class="menu-label ">General</p>
-                <ul class="menu-list ">
-                    <li class="active ">
-                        <a href="index.html ">
-                            <span class="icon "><i class="mdi mdi-desktop-mac "></i></span>
-                            <span class="menu-item-label ">Dashboard</span>
-                        </a>
-                    </li>
-                </ul>
-                <p class="menu-label ">Accounts</p>
-                <ul class="menu-list ">
-                    <li class="--set-active-tables-html ">
-                        <a href="# " class="dropdown ">
-                            <span class="icon "><i class="mdi mdi-table "></i></span>
-                            <span class="menu-item-label ">Employee</span>
-                            <span class="icon "><i class="mdi mdi-plus "></i></span>
-                        </a>
-                        <ul>
-                            <li>
-                                <a href="#void ">
-                                    <span>Assign Task (Role)</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="--set-active-forms-html ">
-                        <a href="forms.html ">
-                            <span class="icon "><i class="mdi mdi-account-multiple "></i></span>
-                            <span class="menu-item-label ">Passengers</span>
-                        </a>
-                    </li>
-                </ul>
-                <p class="menu-label">Subscription</p>
-                <ul class="menu-list">
-                    <li class="--set-active-tables-html">
-                        <a href="#" class="dropdown">
-                            <span class="icon"><i class="fa fa-calendar"></i></span>
-                            <span class="menu-item-label">My Subscription</span>
-                        </a>
-                    </li>
-                </ul>
-                <p class="menu-label ">Ticket</p>
-                <ul class="menu-list ">
-                    <li>
-                        <a href="https://justboil.me " target="_blank " class="has-icon ">
-                            <span class="icon "><i class="mdi mdi-sale "></i></span>
-                            <span class="menu-item-label ">Discounts</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://justboil.me/tailwind-admin-templates " class="has-icon ">
-                            <span class="icon "><i class="mdi mdi-tag-multiple "></i></span>
-                            <span class="menu-item-label ">Promo</span>
-                        </a>
-                    </li>
-                </ul>
-                <p class="menu-label ">My Profile</p>
-                <ul class="menu-list ">
-                    <li class="--set-active-profile-html ">
-                        <a href="profile.html ">
-                            <span class="icon "><i class="mdi mdi-settings "></i></span>
-                            <span class="menu-item-label ">Settings</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </aside>
-
+        <!-- Dashboard Nav Aside Left Start -->
+            <?php require "./resources/templates/_dashboard-aside-nav-left.php"; ?>
+        <!-- Dashboard Nav Aside Left End -->
+        
+        <!-- Dashboard Hero Bar Start -->
         <section class="is-hero-bar ">
             <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0 ">
                 <h1 class="title ">
@@ -135,7 +30,9 @@
                 </h1>
             </div>
         </section>
+        <!-- Dashboard Hero Bar End -->
 
+        <!-- Dashboard Main Section Start -->
         <section class="section main-section ">
             <div class="grid gap-6 grid-cols-1 md:grid-cols-3 mb-6 ">
                 <div class="card ">
@@ -185,34 +82,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- <div class="card mb-6 ">
-                <header class="card-header ">
-                    <p class="card-header-title ">
-                        <span class="icon "><i class="mdi mdi-finance "></i></span> Performance
-                    </p>
-                    <a href="# " class="card-header-icon ">
-                        <span class="icon "><i class="mdi mdi-reload "></i></span>
-                    </a>
-                </header>
-                <div class="card-content ">
-                    <div class="chart-area ">
-                        <div class="h-full ">
-                            <div class="chartjs-size-monitor ">
-                                <div class="chartjs-size-monitor-expand ">
-                                    <div></div>
-                                </div>
-                                <div class="chartjs-size-monitor-shrink ">
-                                    <div></div>
-                                </div>
-                            </div>
-                            <script type="text/javascript " src="js/chart.sample.min.js "></script>
-                            <script type="text/javascript " src="js/chart.sample.js "></script>
-                            <canvas id="big-line-chart " width="2992 " height="1000 " class="chartjs-render-monitor block " style="height: 400px; width: 1197px; "></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
 
             <div class="card has-table ">
                 <header class="card-header ">
@@ -512,47 +381,15 @@
                 </div>
             </div>
         </section>
+        <!-- Dashboard Main Section Start -->
 
-        <div id="sample-modal " class="modal ">
-            <div class="modal-background --jb-modal-close "></div>
-            <div class="modal-card ">
-                <header class="modal-card-head ">
-                    <p class="modal-card-title ">Sample modal</p>
-                </header>
-                <section class="modal-card-body ">
-                    <p>Lorem ipsum dolor sit amet <b>adipiscing elit</b></p>
-                    <p>This is sample modal</p>
-                </section>
-                <footer class="modal-card-foot ">
-                    <button class="button --jb-modal-close ">Cancel</button>
-                    <button class="button red --jb-modal-close ">Confirm</button>
-                </footer>
-            </div>
-        </div>
-
-        <div id="sample-modal-2 " class="modal ">
-            <div class="modal-background --jb-modal-close "></div>
-            <div class="modal-card ">
-                <header class="modal-card-head ">
-                    <p class="modal-card-title ">Sample modal</p>
-                </header>
-                <section class="modal-card-body ">
-                    <p>Lorem ipsum dolor sit amet <b>adipiscing elit</b></p>
-                    <p>This is sample modal</p>
-                </section>
-                <footer class="modal-card-foot ">
-                    <button class="button --jb-modal-close ">Cancel</button>
-                    <button class="button blue --jb-modal-close ">Confirm</button>
-                </footer>
-            </div>
-        </div>
+        <!-- Dashboard Footer Start -->
+            <?php require "./resources/templates/_dashboard-footer.php"; ?>
+        <!-- Dashboard Footer End -->
     </div>
-    <footer>
-        <p class="lead ">Powered by: Barkomatic</p>
-    </footer>
-    <!-- Scripts below are for demo only -->
-    <script type="text/javascript " src="js/main.min.js"></script>
-    <!-- <script type="text/javascript " src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js "></script> -->
+
+    <script type="text/javascript " src="resources/js/main.min.js"></script>
+    <script type="text/javascript " src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js "></script>
 </body>
 
 </html>
