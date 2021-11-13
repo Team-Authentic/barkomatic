@@ -7,14 +7,8 @@
     <div class="menu is-menu-main">
         <p class="menu-label">General</p>
         <ul class="menu-list">
-            <?php 
-                if($_GET['page'] == 'dashboard') { ?>
-                    <li class="active">
-                    
-               <?php } else { ?>
-                   <li class="">
-               <?php } ?>
-                <a href="index.php?page=dashboard">
+            <li class="active">
+                <a href="index.php">
                     <span class="icon"><i class="mdi mdi-desktop-mac"></i></span>
                     <span class="menu-item-la0bel">Dashboard</span>
                 </a>
@@ -22,24 +16,14 @@
         </ul>
         <p class="menu-label">Subscription</p>
         <ul class="menu-list">
-            <?php 
-                if($_GET['page'] == 'subscriber') { ?>
-                    <li class="active">
-               <?php } else { ?>
-                   <li class="">
-               <?php } ?>
-                <a href="index.php?page=subscriber" class="dropdown">
+            <li class="--set-active-tables-html">
+                <a href="subscriber.php" class="dropdown">
                     <span class="icon"><i class="mdi mdi-account-cash"></i></span>
                     <span class="menu-item-label">Subscriber</span>
                 </a>
             </li>
-            <?php 
-                if($_GET['page'] == 'subscription-plan') { ?>
-                    <li class="active">
-               <?php } else { ?>
-                   <li class="">
-               <?php } ?>
-                <a href="index.php?page=subscription-plan" class="dropdown">
+            <li class="--set-active-tables-html">
+                <a href="subscription-plan.php" class="dropdown">
                     <span class="icon"><i class="mdi mdi-clipboard"></i></span>
                     <span class="menu-item-label">Subscription Plan</span>
                 </a>
@@ -47,13 +31,8 @@
         </ul>
         <p class="menu-label">Settings</p>
         <ul class="menu-list">
-            <?php 
-                if($_GET['page'] == 'profile') { ?>
-                    <li class="active">
-               <?php } else { ?>
-                   <li class="">
-               <?php } ?>
-                <a href="index.php?page=profile" class="dropdown">
+            <li class="--set-active-profile-html">
+                <a href="profile.php">
                     <span class="icon"><i class="mdi mdi-settings"></i></span>
                     <span class="menu-item-label">My Profile</span>
                 </a>
