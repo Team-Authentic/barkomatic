@@ -22,7 +22,7 @@
                         Monthly Income
                     </h3>
                     <h1>
-                        $7,770
+                        ₱7,770
                     </h1>
                 </div>
                 <span class="icon widget-icon text-blue-500"><i class="mdi mdi-cart-outline mdi-48px"></i></span>

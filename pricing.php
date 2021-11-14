@@ -36,16 +36,17 @@
                                                 <h5>High</h5>
                                             </div>
                                             <div class="price"> ₱2,000 <span> Per Month</span> </div>
-                                            <div class="guarantee">
+                                            <!-- <div class="guarantee">
                                                 <p>Money back Gurantee</p>
-                                            </div>
+                                            </div> -->
                                         </div>
                                         <ul class="tb-content">
-                                            <li>Virtual Private Server hosting now with double the RAM at no additional cost.</li>
+                                            <!-- <li>Virtual Private Server hosting now with double the RAM at no additional cost.</li>
                                             <li><strong>Great for:</strong> Small Businesses, Resellers, Devs, Designers</li>
                                             <li>Single Domain</li>
                                             <li>UNLIMITED Disk Space</li>
-                                            <li>UNLIMITED Disk Space</li>
+                                            <li>UNLIMITED Disk Space</li> -->
+                                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus officiis minus, repellat sit officia corporis! Omnis velit unde voluptatum facilis laudantium a qui, natus distinctio consectetur labore dolorem enim quam?</li>
                                         </ul>
                                         <div class="buy-now">
                                             <a class="button small" href="#">SELECT PLAN <span class="icon-caret-right"></span></a>
@@ -59,16 +60,17 @@
                                                 <h5>Medium</h5>
                                             </div>
                                             <div class="price"> ₱1,500 <span> Per Month</span> </div>
-                                            <div class="guarantee">
+                                            <!-- <div class="guarantee">
                                                 <p>Money back Gurantee</p>
-                                            </div>
+                                            </div> -->
                                         </div>
                                         <ul class="tb-content">
-                                            <li>Virtual Private Server hosting now with double the RAM at no additional cost.</li>
+                                            <!-- <li>Virtual Private Server hosting now with double the RAM at no additional cost.</li>
                                             <li><strong>Great for:</strong> Small Businesses, Resellers, Devs, Designers</li>
                                             <li>Single Domain</li>
                                             <li>UNLIMITED Disk Space</li>
-                                            <li>UNLIMITED Disk Space</li>
+                                            <li>UNLIMITED Disk Space</li> -->
+                                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus officiis minus, repellat sit officia corporis! Omnis velit unde voluptatum facilis laudantium a qui, natus distinctio consectetur labore dolorem enim quam?</li>
                                         </ul>
                                         <div class="buy-now">
                                             <a class="button small" href="#">SELECT PLAN <span class="icon-caret-right"></span></a>
@@ -82,16 +84,17 @@
                                                 <h5>Basic</h5>
                                             </div>
                                             <div class="price"> ₱1,000 <span> Per Month</span> </div>
-                                            <div class="guarantee">
+                                            <!-- <div class="guarantee">
                                                 <p>Money back Gurantee</p>
-                                            </div>
+                                            </div> -->
                                         </div>
                                         <ul class="tb-content">
-                                            <li>Virtual Private Server hosting now with double the RAM at no additional cost.</li>
+                                            <!-- <li>Virtual Private Server hosting now with double the RAM at no additional cost.</li>
                                             <li><strong>Great for:</strong> Small Businesses, Resellers, Devs, Designers</li>
                                             <li>Single Domain</li>
                                             <li>UNLIMITED Disk Space</li>
-                                            <li>UNLIMITED Disk Space</li>
+                                            <li>UNLIMITED Disk Space</li> -->
+                                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus officiis minus, repellat sit officia corporis! Omnis velit unde voluptatum facilis laudantium a qui, natus distinctio consectetur labore dolorem enim quam?</li>
                                         </ul>
                                         <div class="buy-now">
                                             <a class="button small" href="#">SELECT PLAN <span class="icon-caret-right"></span></a>

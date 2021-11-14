@@ -34,6 +34,10 @@
                     require "./resources/templates/_dashboard-subscriber.php";
                 }
 
+                if($_GET['page'] == 'subscription-plan') {
+                    require "./resources/templates/_dashboard-subscription-plan.php";
+                }
+
                 if($_GET['page'] == 'profile') {
                     require "./resources/templates/_dashboard-profile.php";
                 }
