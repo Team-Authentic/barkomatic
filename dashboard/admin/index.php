@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="">
 <head>
-    <?php require "./resources/templates/_dashboard-head.php"; ?>
+    <?php require "./resources/templates/_dashboard-head.php";?>
 </head>
 <body>
     <div id="app">

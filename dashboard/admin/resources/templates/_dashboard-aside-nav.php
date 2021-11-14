@@ -10,7 +10,6 @@
             <?php 
                 if($_GET['page'] == 'dashboard') { ?>
                     <li class="active">
-                    
                <?php } else { ?>
                    <li class="">
                <?php } ?>

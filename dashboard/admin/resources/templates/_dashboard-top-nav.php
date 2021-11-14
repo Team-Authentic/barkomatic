@@ -14,7 +14,7 @@
             <div class="navbar-item has-divider has-user-avatar">
                 <a class="navbar-link">
                     <div class="user-avatar">
-                        <img src="https://avatars.dicebear.com/v2/initials/john-doe.svg" alt="John Doe" class="rounded-full">
+                        <img src="https://media-exp1.licdn.com/dms/image/C5603AQHipC7N7XF5Bg/profile-displayphoto-shrink_800_800/0/1607875357547?e=1642636800&v=beta&t=L7w8vUK8rYcNmVsbeoOJTzYUxO4XZG6bQMVnEzlWerw" alt="kimdavetorres" class="rounded-full">
                     </div>
                     <div class="is-user-name"><span>Admin</span></div>
                 </a>

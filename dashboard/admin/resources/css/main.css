@@ -1827,18 +1827,19 @@ footer {
     }
 }
 
-.plan-description {
-    width: 470px;
-    text-align: justify;
-}
-
-.card-content:hover {
-    background-color: #f9fafb;
-    border-left: 2px solid #3b82f6;
+#card-content-i:hover {
+    background-color: #f9fafb !important;
+    border-left: 2px solid #3b82f6 !important;
 }
 
 .plan-price,
 .plan-frequency {
     color: #3b82f6;
     font-weight: bold;
+}
+
+.plan-description {
+    font-size: 0.885rem;
+    width: 470px;
+    text-align: justify;
 }

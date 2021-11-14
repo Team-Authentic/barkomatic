@@ -18,7 +18,7 @@
                 <span class="icon"><i class="mdi mdi-clipboard-list-outline"></i></span> Subscription Plan
             </p>
         </header>
-        <div class="card-content">
+        <div class="card-content" id="card-content-i">
             <form>
                 <div class="field">
                     <div class="control" style="text-align:right;">
@@ -43,7 +43,7 @@
             </form>
         </div>
         <hr>
-        <div class="card-content">
+        <div class="card-content" id="card-content-i">
             <form>
                 <div class="field">
                     <div class="control" style="text-align:right;">

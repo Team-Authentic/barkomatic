@@ -12,11 +12,16 @@
             <thead>
                 <tr>
                     <th></th>
-                    <th>Name</th>
-                    <th>Company</th>
-                    <th>City</th>
-                    <th>Progress</th>
-                    <th>Created</th>
+                    <th>Shipping Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Password</th>
+                    <th>Security Answer</th>
+                    <th>Username</th>
+                    <th>Inserted</th>
+                    <th>Updated</th>
+                    <th>Token</th>
+                    <th>Token Expire</th>
                     <th></th>
                 </tr>
             </thead>
