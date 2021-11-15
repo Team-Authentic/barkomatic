@@ -11,13 +11,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Title -->
-    <title>Barkomatic - Online Ticketing</title>
+    <title>Barkomatic - Search Trip</title>
     <!-- Favicon -->
     <link rel="icon" href="./img/core-img/favicon.png">
     <!-- Stylesheet -->
 </head>
 
-<body>
+<body style="overflow: hidden;">
     <!-- Preloader -->
     <div id="preloader">
         <div class="loader"></div>
@@ -26,37 +26,6 @@
 
     <!-- Header Area Start -->
     <header class="header-area">
-        <!-- Top Header Area Start -->
-        <div class="top-header-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-6">
-                        <div class="top-header-content">
-                            <a href="#"><i class="icon_phone"></i> <span>(123) 456-789-1230</span></a>
-                            <a href="#"><i class="icon_mail"></i> <span>barkomatic2021@gmail.com</span></a>
-                        </div>
-                    </div>
-                    <div class="col-6 pr-0">
-                        <div class="top-header-content">
-                            <a href="#" class="invisible"><i class="icon_mail"></i> <span>barkomatic2021@gmail.com</span></a>
-                            <?php 
-                                session_start();
-                                if(isset($_SESSION['shipping_name']) && isset($_SESSION['profile_image']) && isset($_SESSION['username'])) { ?>
-                                    <button type="button" class="btn btn-success ml-auto" id="btn-su">
-                                        <a href="login.php" class="text-white" id="login-link">Go to Dashboard</a>
-                                    </button>
-                              <?php } else { ?>
-                                    <button type="button" class="btn btn-success ml-auto" id="btn-su">
-                                        <a href="login.php" class="text-white" id="login-link">Login</a>&nbsp; <span>|</span> &nbsp;<a href="signup.php" class="text-white" id="signup-link">Signup</a>
-                                    </button>
-                              <?php } ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Top Header Area End -->
-
         <!-- Main Header Start -->
         <div class="main-header-area">
             <div class="classy-nav-container breakpoint-off">
@@ -87,11 +56,17 @@
                             <!-- Nav Start -->
                             <div class="classynav">
                                 <ul id="nav">
-                                    <li class="active">
+                                    <li class="">
                                         <a href="index.html">Home</a>
                                     </li>
+                                    <li class="">
+                                        <a href="#">Contact Us</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="index.html">Privacy Policy</a>
+                                    </li>
                                     <li class="cn-dropdown-item has-down">
-                                        <a href="#">How to Book</a>
+                                        <a href="#">PASSENGER GIUDE LINES</a>
                                         <ul class="dropdown" style="background-color: #09527F;">
                                             <li>
                                                 <a href="passenger.html">- Passenger</a>
@@ -101,11 +76,8 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    <li>
-                                        <a href="contact.php">Contact Us</a>
-                                    </li>
                                     <li class="cn-dropdown-item has-down">
-                                        <a href="#">About Us</a>
+                                        <a href="#">CARGO GUIDELINES</a>
                                         <ul class="dropdown" style="background-color: #09527F;">
                                             <li>
                                                 <a href="faq.html">- FAQ</a>

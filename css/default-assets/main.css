@@ -3754,12 +3754,14 @@ html .ui-button.ui-state-disabled:active {
 /* Banner Welcome Style Start */
 
 .welcome-section {
+    overflow: hidden !important;
     background-attachment: fixed;
     width: 100%;
     height: 100vh;
     background-image: url("../../img/bg-img/3.png");
     background-size: 100% 100%;
     background-position: center;
+    opacity: 0.8;
     color: #fff;
 }
 
@@ -3910,150 +3912,46 @@ div.intro.text-center.container {
 /* RESPONSIVE MEDIA QUERIES End*/
 
 
-/* INFORMATION PAGE STYLE */
+/*................... SearchTrip Section CSS START............................. */
 
-input[type=date] {
-    font-size: 21px;
+.barkomatic-main-section {
+    margin-left: 50px;
 }
 
-.required-contact-label {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 20px;
-    width: 300px;
-    height: 55px;
-    background-color: #969393fa;
-    border-top-right-radius: 50px;
-    border: 1px solid #1B85EF;
-    border-bottom: none;
-    margin-bottom: 0px;
-    padding: 15px 0px 15px 20px;
-}
-
-.intro-section {
-    text-align: ce;
-    position: absolute;
-    width: 100%;
-    background-color: #000000;
-}
-
-
-/* search trip style start */
-
-.searchtrip-area {
-    background-image: url("img/coron.jpg");
-    height: 110vh;
-    background-position: center;
+#bakomatic-tag-line {
+    font-weight: 600;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 6px #ccc;
+    background-image: url('../../img/coron.jpg');
+    background-repeat: repeat;
     background-size: cover;
-    background-repeat: no-repeat;
 }
 
-.search-trip-content {
-    position: absolute;
+.search-trip-hero-title {
+    text-shadow: 0 0 10px #000 !important;
+}
+
+.barkomatic-nav-active {
+    background-color: #09527f;
+    color: #fff;
+}
+
+.barkomatic-nav:hover {
+    cursor: pointer;
+}
+
+.barkomatic-btn-search-trip {
+    background-color: #09527f;
+    color: #fff;
+}
+
+.barkomatic-btn-search-trip:hover {
+    cursor: pointer;
+}
+
+.current {
     display: flex;
-    align-items: flex-start;
-    background-color: #09527F;
-    height: 70%;
-    width: 50%;
-    border-radius: 0px 0px 250px 0px;
-    margin-bottom: 50%;
+    margin-top: -5px;
 }
-
-
-/* search trip style end */
-
-
-/* Book Ship Ticket nav tabs start  */
-
-.nav {
-    background-color: whitesmoke;
-    margin-right: 0;
-    margin-left: .75cm;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-#profile {
-    margin-top: 0px;
-}
-
-.book-ship-tickets-bg {
-    background-color: #09527F;
-}
-
-.sectionPanel {
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-.nav-pills>li>a {
-    border-radius: 4px 4px 4px 4px;
-    width: 150px;
-    height: 50px;
-    text-align: center;
-}
-
-.tab-content {
-    color: rgb(255, 255, 255);
-}
-
-#exTab3 {
-    padding-left: 5px;
-    padding-right: 5px;
-    width: 100%;
-}
-
-.nice-select {
-    border: 2px solid #f5b917;
-    width: 430px;
-    height: 60px;
-    font-size: 30px;
-    border-radius: 10px;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-}
-
-.nice-select .list {
-    overflow: auto;
-    width: 425px;
-    background-color: rgb(150, 138, 151);
-    border: 2px solid #f30909;
-    overflow: auto;
-    height: 250px;
-    font-size: 20px;
-    color: black;
-}
-
-input[type=date] {
-    line-height: 35px;
-    width: 220px;
-    height: 55px;
-    border: 2px solid #f5b917;
-    border-radius: 10px;
-}
-
-
-/* SELECT OR INPUT DATE Start  */
-
-.col {
-    flex-basis: 0;
-    flex-grow: 2;
-    max-width: 100%;
-}
-
-.ship-radio {
-    width: 80px;
-    height: 60px;
-}
-
-
-/*-- STYLE for radio Button <Round/OneWay Trip> Start */
-
-.hide {
-    display: none;
-}
-
-
-/*--STYLE for radio Button <Round/OneWay Trip> END */
-
-
-/* Book Ship Ticket nav tabs End */

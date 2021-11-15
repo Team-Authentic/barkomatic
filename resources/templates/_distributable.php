@@ -1,1 +1,1 @@
-<link rel="stylesheet" href="css/default-assets/main.css">
+<link rel="stylesheet" href="css/default-assets/main.css?version=1">
