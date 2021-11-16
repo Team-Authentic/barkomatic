@@ -2,6 +2,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dashboard - <?php echo $_SESSION['shipping_name']; ?></title>
-<link rel="stylesheet" href="resources/css/main.css">
-<link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png" />
+<link rel="stylesheet" href="resources/css/main.css?version=barkomatic">
+<link rel="stylesheet" href="resources/css/bootstrap.min.css">
+<link rel="icon" type="image/png" sizes="32x32" href="resources/img/favicon.png" />
 <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.9.95/css/materialdesignicons.min.css">
