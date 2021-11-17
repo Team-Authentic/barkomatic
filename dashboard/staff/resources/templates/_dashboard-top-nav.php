@@ -12,7 +12,7 @@
             <?php } ?>
             <?php 
                 if($_GET['page'] == 'add-schedules') { ?>
-                    <span class="icon add-sched-hero-title" style="margin-left:150px;"><i class="mdi mdi-plus-thick"></i> &nbsp;Add Available Schedules For Booking</span>
+                    <span class="icon add-sched-hero-title" style="margin-left:40px;"><i class="mdi mdi-plus-thick"></i> &nbsp;Schedules</span>
             <?php } ?>
             <?php 
                 if($_GET['page'] == 'passenger-booking') { ?>

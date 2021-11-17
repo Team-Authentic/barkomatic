@@ -5,8 +5,8 @@
         </div>
     </div>
     <div class="menu is-menu-main">
-        <p class="menu-label">General</p>
-        <ul class="menu-list">
+        <p class="menu-label mb-0">General</p>
+        <ul class="menu-list mb-0">
             <?php 
                 if($_GET['page'] == 'dashboard') { ?>
                     <li class="active">
@@ -19,8 +19,8 @@
                 </a>
             </li>
         </ul>
-        <p class="menu-label">Schedules</p>
-        <ul class="menu-list">
+        <p class="menu-label mb-0">Ship Management</p>
+        <ul class="menu-list mb-0">
             <?php 
                 if($_GET['page'] == 'add-schedules') { ?>
                     <li class="active">
@@ -29,7 +29,29 @@
                <?php } ?>
                 <a href="index.php?page=add-schedules" class="dropdown">
                     <span class="icon"><i class="mdi mdi-plus-thick"></i></span>
-                    <span class="menu-item-label">Add New</span>
+                    <span class="menu-item-label">Schedules</span>
+                </a>
+            </li>
+            <?php 
+                if($_GET['page'] == 'accomodation-type') { ?>
+                    <li class="active">
+               <?php } else { ?>
+                   <li class="">
+               <?php } ?>
+                <a href="index.php?page=accomodation-type" class="dropdown">
+                    <span class="icon"><i class="mdi mdi-plus-thick"></i></span>
+                    <span class="menu-item-label">Accomodation Type</span>
+                </a>
+            </li>
+            <?php 
+                if($_GET['page'] == 'ports') { ?>
+                    <li class="active">
+               <?php } else { ?>
+                   <li class="">
+               <?php } ?>
+                <a href="index.php?page=ports" class="dropdown">
+                    <span class="icon"><i class="mdi mdi-plus-thick"></i></span>
+                    <span class="menu-item-label">Ports</span>
                 </a>
             </li>
         </ul>

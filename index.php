@@ -1,9 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
 
-    <!-- Main Header Start -->
-    <?php 
-        require("resources/config.php");
-        require(TEMPLATES_PATH . "/_header.php");
-    ?>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Title -->
+    <title>Barkomatic - Online Ticketing</title>
+    <!-- Favicon -->
+    <link rel="icon" href="./img/core-img/favicon.png">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/default-assets/main.css?version=barkomatic">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- /Preloader -->
+
+    <!-- Header Area Start -->
+    <header class="header-area">
+        <!-- Top Header Area Start -->
+        <div class="top-header-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="top-header-content">
+                            <a href="#"><i class="icon_phone"></i> <span>(123) 456-789-1230</span></a>
+                            <a href="#"><i class="icon_mail"></i> <span>barkomatic2021@gmail.com</span></a>
+                        </div>
+                    </div>
+                    <div class="col-6 pr-0">
+                        <div class="top-header-content">
+                            <a href="#" class="invisible"><i class="icon_mail"></i> <span>barkomatic2021@gmail.com</span></a>
+                            <?php 
+                                session_start();
+                                if(isset($_SESSION['shipping_name']) && isset($_SESSION['profile_image']) && isset($_SESSION['username'])) { ?>
+                                    <button type="button" class="btn btn-success ml-auto" id="btn-su">
+                                        <a href="login.php" class="text-white" id="login-link">Go to Dashboard</a>
+                                    </button>
+                              <?php } else { ?>
+                                    <button type="button" class="btn btn-success ml-auto" id="btn-su">
+                                        <a href="login.php" class="text-white" id="login-link">Login</a>&nbsp; <span>|</span> &nbsp;<a href="signup.php" class="text-white" id="signup-link">Signup</a>
+                                    </button>
+                              <?php } ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Top Header Area End -->
+
+        <!-- Main Header Start -->
+        <div class="main-header-area">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Classy Menu -->
+                    <nav class="classy-navbar justify-content-between" id="robertoNav">
+                        <!-- Logo -->
+                        <a class="nav-brand mr-0" href="index.php">
+                            <img src="./img/core-img/logo.png" alt="BarkoMatic">
+                        </a>
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler">
+                                <span></span>
+                            <span></span>
+                            <span></span>
+                            </span>
+                        </div>
+                        <!-- Menu -->
+                        <div class="classy-menu">
+                            <!-- Menu Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap">
+                                    <span class="top"></span>
+                                    <span class="bottom"></span>
+                                </div>
+                            </div>
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul id="nav">
+                                    <li class="active">
+                                        <a href="index.html">Home</a>
+                                    </li>
+                                    <li class="cn-dropdown-item has-down">
+                                        <a href="#">How to Book</a>
+                                        <ul class="dropdown" style="background-color: #09527F;">
+                                            <li>
+                                                <a href="passenger.html">- Passenger</a>
+                                            </li>
+                                            <li>
+                                                <a href="rollings-cargo.html">- Rollings Cargo</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="contact.php">Contact Us</a>
+                                    </li>
+                                    <li class="cn-dropdown-item has-down">
+                                        <a href="#">About Us</a>
+                                        <ul class="dropdown" style="background-color: #09527F;">
+                                            <li>
+                                                <a href="faq.html">- FAQ</a>
+                                            </li>
+                                            <li>
+                                                <a href="about.html">- About Us</a>
+                                            </li>
+                                            <li>
+                                                <a href="ticket-agent.html">- Ticket Agent</a>
+                                            </li>
+                                            <li>
+                                                <a href="blog.html">- Blog</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <!-- Book Now -->
+                                <!-- <div class="book-now-btn">
+                                    <a href="book.php">
+                                        Book Now
+                                        <i class="bi bi-arrow-right-circle-fill"></i>
+                                    </a>
+                                </div> -->
+                            </div>
+                            <!-- Nav End -->
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
     <!-- Header Area End -->
    <!-- Welcome Area Start -->
     <section class="welcome-section">
@@ -227,10 +356,108 @@
     </div>
     </section>
     <!-- About Us Area End -->
-
     <!-- Footer Area Start -->
-    <?php 
-        require_once(TEMPLATES_PATH . "/_footer.php");
-    ?>
+    <footer class="footer-area section-padding-80-0">
+            <!-- Main Footer Area -->
+            <div class="main-footer-area">
+                <div class="container">
+                    <div class="row align-items-baseline ">
+                        <!-- Single Footer Widget Area -->
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <div class="single-footer-widget mb-80">
+                                <!-- Footer Logo -->
+                                <a href="#" class="footer-logo"><img src="img/core-img/logo.png" alt=""></a>
+                                <p class="footprag">Call Us</p>
+                                <h4>+12 345-678-9999</h4>
+                                <p>Email Us</p>
+                                <h4>barkomatic2021@gmail.com
+                                    <h4>
+
+                            </div>
+                        </div>
+
+                        <!-- Single Footer Widget Area -->
+                        <div class="col-12 col-sm-2 col-lg-4">
+                            <div class="single-footer-widget mb-80">
+                                <!-- Widget Title -->
+                                <h5 class="widget-title">MANUALS</h5>
+
+                                <!-- Single Blog Area -->
+                                <div class="latest-blog-area">
+                                    <a href="#" class="post-title">Boarding Guidelines</a>
+                                    <a href="#" class="post-title">Payment Option</a>
+                                    <a href="#" class="post-title">Passenger Ticket Booking Manual</a>
+                                    <a href="#" class="post-title">Rolling Cargo Booking Manual</a>
+                                </div>
+
+                                <!-- Single Blog Area -->
+                            </div>
+                        </div>
+
+                        <!-- Single Footer Widget Area -->
+                        <div class="col-12 col-sm-2 col-lg-4">
+                            <div class="single-footer-widget mb-80">
+                                <!-- Widget Title -->
+                                <h5 class="widget-title">POLICY</h5>
+
+                                <!-- Single Blog Area -->
+                                <div class="latest-blog-area">
+                                    <a href="#" class="post-title">Refund Policy</a>
+                                    <a href="#" class="post-title">Rebooking Policy</a>
+                                    <a href="#" class="post-title">Barkomatic Terms & Conditions</a>
+                                    <a href="#" class="post-title">Privacy Policy</a>
+                                </div>
+                                <!-- Single Blog Area -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copywrite Area -->
+            <div class="container">
+                <div class="copywrite-content">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-md-8">
+                            <!-- Copywrite Text -->
+                            <div class="copywrite-text">
+                                <p>
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                    Copyright &copy;
+                                    <script>
+                                        document.write(new Date().getFullYear());
+                                    </script> All rights reserved | Barkomatic</a>
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <!-- Social Info -->
+                            <div class="social-info">
+                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer Area End -->
+
+        <!-- **** All JS Files ***** -->
+        <!-- jQuery 2.2.4 -->
+        <script src="js/jquery.min.js"></script>
+        <!-- Popper -->
+        <script src="js/popper.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- All Plugins -->
+        <script src="js/roberto.bundle.js"></script>
+        <!-- Active -->
+        <script src="js/default-assets/active.js"></script>
+</body>
+</html>
     <!-- Footer Area End -->
 

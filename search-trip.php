@@ -131,7 +131,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-6 pr-0 text-right">
-                                                        <div style="border-radius: 0px !important;" class="barkomatic-btn-search-trip form-control text-center"><i class="fa fa-search ml-0"></i> Search Trips</div>
+                                                        <div style="border-radius: 0px !important;" class="barkomatic-btn-search-trip form-control text-center"><i class="fa fa-search ml-0"></i> <a href="schedule.php" class="text-white">Search Trips</a></div>
                                                     </div>
                                                 </div>
                                             </div>

@@ -12,8 +12,7 @@
     <!-- Favicon -->
     <link rel="icon" href="./img/core-img/favicon.png">
     <!-- Stylesheet -->
-
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/default-assets/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <style>
         /* Input Fields */
@@ -278,7 +277,7 @@
                     <!-- Classy Menu -->
                     <nav class="classy-navbar" id="robertoNav">
                         <!-- Logo -->
-                        <a class="nav-brand" href="index.html">
+                        <a class="nav-brand" href="index.php">
                             <img src="./img/core-img/logo.png" alt="BarkoMatic">
                         </a>
                         <!-- Navbar Toggler -->

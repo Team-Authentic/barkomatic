@@ -14,7 +14,7 @@
     <link rel="icon" href="./img/core-img/favicon.png">
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/default-assets/main.css?version=barkomatic">
 
 </head>
 

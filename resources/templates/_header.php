@@ -1,7 +1,3 @@
-<?php 
-    require("resources/config.php");
-    require (TEMPLATES_PATH . "/_distributable.php");
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,6 +11,10 @@
     <!-- Favicon -->
     <link rel="icon" href="./img/core-img/favicon.png">
     <!-- Stylesheet -->
+    <?php 
+        // require("resources/config.php");
+        require (TEMPLATES_PATH . "/_distributable.php");
+    ?>
 </head>
 
 <body>
