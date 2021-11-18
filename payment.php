@@ -152,8 +152,8 @@
             height: 8rem;
         }
         
-        .arrow {}
-        
+        /* .arrow {}
+         */
         .images p {
             font-size: 20%;
         }
@@ -229,7 +229,7 @@
             .progressbar {
                 display: none;
             }
-            .receipt-border-col {}
+            /* .receipt-border-col {} */
         }
         
         @media only screen and (max-width: 600px) {
@@ -398,20 +398,20 @@
 
                 <div class=" receipt-border-col  col-sm-3 border" style="margin-top: -5%; position: fixed; right: 2%; color: black; background-color: rgb(18, 68, 63); font-size: 60%;">
                     <div class="row">
-                        <p class="col-sm-6 style=" margin-left: 10%; font-size: 200%; ">Passenger </p>
-                                            <p class="col-sm-6 style="margin-left: 10%; font-size: 200%;"> 2</p>
+                        <p class="col-sm-6" style=" margin-left: 10%; font-size: 200%;">Passenger </p>
+                                            <p class="col-sm-6" style="margin-left: 10%; font-size: 200%;"> 2</p>
                     </div>
                     <div class="row">
-                        <p class="col-sm-6 style=" margin-left: 10%; font-size: 200%; ">Service Charge</p>
-                                          <p class="col-sm-6 style="margin-left: 10%; font-size: 200%;"> 200</p>
+                        <p class="col-sm-6" style=" margin-left: 10%; font-size: 200%; ">Service Charge</p>
+                                          <p class="col-sm-6" style="margin-left: 10%; font-size: 200%;"> 200</p>
                     </div>
                     <div class="row">
-                        <p class="col-sm-6 style=" margin-left: 10%; font-size: 200%; ">Terminal fee</p>
-                                            <p class="col-sm-6 style="margin-left: 10%; font-size: 200%;"> 200</p>
+                        <p class="col-sm-6" style=" margin-left: 10%; font-size: 200%; ">Terminal fee</p>
+                                            <p class="col-sm-6" style="margin-left: 10%; font-size: 200%;"> 200</p>
                     </div>
-                    <div class="row" style="margin-top:5%; border-top:">
-                        <p class="col-sm-6 style=" margin-left: 10%; font-size: 200%; ">Total</p>
-                                            <p class="col-sm-6 style="margin-left: 10%; font-size: 200%;"> 400</p>
+                    <div class="row" style="margin-top:5%; border-top:0">
+                        <p class="col-sm-6" style=" margin-left: 10%; font-size: 200%; ">Total</p>
+                                            <p class="col-sm-6" style="margin-left: 10%; font-size: 200%;"> 400</p>
                     </div>
                     <br>
                     <br>

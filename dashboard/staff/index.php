@@ -13,6 +13,14 @@
                     require "./resources/templates/_dashboard-landing.php";
                 }
 
+                if($_GET['page'] == 'ports') {
+                    require "./resources/templates/_dashboard-port.php";
+                }
+
+                if($_GET['page'] == 'accomodation-type') {
+                    require "./resources/templates/_dashboard-accomodation-type.php";
+                }
+
                 if($_GET['page'] == 'add-schedules') {
                     require "./resources/templates/_dashboard-add-schedule.php";
                 }

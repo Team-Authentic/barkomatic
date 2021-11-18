@@ -11,6 +11,14 @@
                     <span class="icon"><i class="mdi mdi-desktop-mac" style="margin-left:90px;"></i> &nbsp;Dashboard</span>
             <?php } ?>
             <?php 
+                if($_GET['page'] == 'ports') { ?>
+                    <span class="icon add-sched-hero-title" style="margin-left:50px;"><i class="mdi mdi-anchor"></i> &nbsp;Port Location</span>
+            <?php } ?>
+            <?php 
+                if($_GET['page'] == 'accomodation-type') { ?>
+                    <span class="icon add-sched-hero-title" style="margin-left:90px;"><i class="mdi mdi-pencil-box-multiple"></i> &nbsp;Accomodation Type</span>
+            <?php } ?>
+            <?php 
                 if($_GET['page'] == 'add-schedules') { ?>
                     <span class="icon add-sched-hero-title" style="margin-left:40px;"><i class="mdi mdi-plus-thick"></i> &nbsp;Schedules</span>
             <?php } ?>
