@@ -785,12 +785,12 @@
                         </div>
                         <div class="border" style="margin-top: 20%; background-color: aliceblue; border-radius:5px;">
                             <div class="   departure2 " style=" background-color: #388190;  border-radius:5px;">
-                                <p class="" style=" margin: 4px 10px 4px 10px; color: whitesmoke;">DEPARTURE <button><i class="fa fa-arrow-circle-down" style="margin-top: -4%; position: absolute; right: 10%;"></i></button></p>
+                                <p class="" style=" margin: 4px 10px 4px 10px; color: whitesmoke;">RETURN <button><i class="fa fa-arrow-circle-down" style="margin-top: -4%; position: absolute; right: 10%;"></i></button></p>
 
                             </div>
                             <div class="col-sm-12  " style=" background-color: aliceblue; border-radius:5px;">
 
-                                No departure voyage selected yet.
+                                No return voyage selected yet.
 
                             </div>
                         </div>
@@ -880,3618 +880,2040 @@
         });
         const dates = new Date();
 
-        const months = [
-            "Jan",
-            "Feb",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "Aug",
-            "Sept",
-            "Oct",
-            "Nov",
-            "Dec",
-        ];
-        const week = [
-            "Sun,",
-            "Mon,",
-            "Tue,",
-            "Wed,",
-            "Thu,",
-            "Fri,",
-            "Sat,"
+const months = [
+    "Jan",
+    "Feb",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "Aug",
+    "Sept",
+    "Oct",
+    "Nov",
+    "Dec",
+];
+const week = [
+    "Sun,",
+    "Mon,",
+    "Tue,",
+    "Wed,",
+    "Thu,",
+    "Fri,",
+    "Sat,"
 
-        ];
-        const day = dates.getDate();
+];
+const day = dates.getDate();
 
 
-        const month = dates.getMonth();
-        const weeks = dates.getDay();
-        let zzzz = dates.getFullYear();
-        let zzz = day;
-        let zz = month;
-        let z = weeks;
+const month = dates.getMonth();
+const weeks = dates.getDay();
+let zzzz = dates.getFullYear();
+let zzz = day;
+let zz = month;
+let z = weeks;
 
-        if (z < 7) {
-            document.querySelector(".week").innerHTML = week[z];
-            console.log(zzzz);
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zzz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n1 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    console.log(zzz);
-                    console.log(zzz);
-                    zzz = 1;
-                    document.querySelector(" .date .n1 ").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        console.log(zzz);
-                        console.log(zzz);
-                        document.querySelector(" .date .n1 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        console.log(zzz);
-                        console.log(zzz);
-                        zzz = 1;
-                        document.querySelector(" .date .n1 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        console.log(zz);
-                        console.log(zzz);
-                        document.querySelector(" .date .n1 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        console.log(zzz);
-                        console.log(zzz);
-                        zzz = 1;
-                        document.querySelector(" .date .n1 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
+if (z < 7) {
+    document.querySelector(".week").innerHTML = week[z];
 
-            } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n1 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n1 ").innerHTML = zzz;
-                    zzz++;
-                }
-            }
-
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zzz);
+            console.log(zzz);
+            document.querySelector(" .date .n1 ").innerHTML = zzz;
+            zzz++;
         } else {
-            z = 0;
-            document.querySelector(".week").innerHTML = week[z];
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n1 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n1 ").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n1 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n1 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n1 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n1 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
-
-            } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n1 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n1 ").innerHTML = zzz;
-                    zzz++;
-                }
-            }
+            console.log(zzz);
+            console.log(zzz);
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n1 ").innerHTML = zzz;
+            zzz++;
         }
-        // first date box end
-        if (z < 7) {
-            document.querySelector(".week1").innerHTML = week[z];
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n2 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n2 ").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n2 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n2 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n2 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n2 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
-
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                console.log(zzz);
+                console.log(zzz);
+                document.querySelector(" .date .n1 ").innerHTML = zzz;
+                zzz++;
             } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n2 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n2 ").innerHTML = zzz;
-                    zzz++;
-                }
-            }
-
-        } else {
-            z = 0;
-            document.querySelector(".week1").innerHTML = week[z];
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n2 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n2 ").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n2 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n2 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n2 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n2 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
-
-            } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n2").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n2 ").innerHTML = zzz;
-                    zzz++;
-                }
-            }
-        }
-        // second box date end
-        if (z < 7) {
-            document.querySelector(".week2").innerHTML = week[z];
-            console.log(z);
-            console.log(week[z]);
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n3 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n3 ").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n3 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n3 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n3 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n3 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
-
-            } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n3").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n3 ").innerHTML = zzz;
-                    zzz++;
-                }
+                console.log(zzz);
+                console.log(zzz);
+                zzz = 1;
+                document.querySelector(" .date .n1 ").innerHTML = zzz;
+                zzz++;
             }
         } else {
-            z = 0;
-            document.querySelector(".week2").innerHTML = week[z];
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n3 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .3 ").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n3 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n3 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n3 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n3 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
-
+            if (zzz <= 28) {
+                console.log(zz);
+                console.log(zzz);
+                document.querySelector(" .date .n1 ").innerHTML = zzz;
+                zzz++;
             } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n3").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n3 ").innerHTML = zzz;
-                    zzz++;
-                }
+                console.log(zzz);
+                console.log(zzz);
+                zzz = 1;
+                document.querySelector(" .date .n1 ").innerHTML = zzz;
+                zzz++;
             }
-
         }
-        // third date box end
-        if (z < 7) {
-            document.querySelector(".week3").innerHTML = week[z];
-            console.log(z);
-            console.log(week[z]);
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n4 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n4 ").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n4 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .4 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n4 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n4 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
 
-            } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n4").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n4 ").innerHTML = zzz;
-                    zzz++;
-                }
-            }
-
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n1 ").innerHTML = zzz;
+            zzz++;
         } else {
-            z = 0;
-            document.querySelector(".week3").innerHTML = week[z];
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n4 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n4 ").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n4 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n4 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n4 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n4 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
-
-            } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n4").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n4 ").innerHTML = zzz;
-                    zzz++;
-                }
-            }
+            zzz = 1;
+            document.querySelector(" .date .n1 ").innerHTML = zzz;
+            zzz++;
         }
-        // fourth date box end
-        if (z < 7) {
-            document.querySelector(".week4").innerHTML = week[z];
-            console.log(z);
-            console.log(week[z]);
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n5 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n5 ").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n5 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n5 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n5 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n5 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
+    }
 
-            } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n5").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n5 ").innerHTML = zzz;
-                    zzz++;
-                }
-            }
-
+} else {
+    z = 0;
+    document.querySelector(".week").innerHTML = week[z];
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n1 ").innerHTML = zzz;
+            zzz++;
         } else {
-            z = 0;
-            document.querySelector(".week4").innerHTML = week[z];
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n5 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n5 ").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n5 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n5 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n5 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n5 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
-
-            } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n5").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n5 ").innerHTML = zzz;
-                    zzz++;
-                }
-            }
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n1 ").innerHTML = zzz;
+            zzz++;
         }
-        // fifth date box end
-        if (z < 7) {
-            document.querySelector(".week5").innerHTML = week[z];
-            console.log(z);
-            console.log(week[z]);
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n6 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n6 ").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n6 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n6 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n6 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n6 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
-
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n1 ").innerHTML = zzz;
+                zzz++;
             } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n6").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n6 ").innerHTML = zzz;
-                    zzz++;
-                }
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n1 ").innerHTML = zzz;
+                zzz++;
             }
         } else {
-            z = 0;
-            document.querySelector(".week5").innerHTML = week[z];
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n6 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n6 ").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n6 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n6 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n6 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n6 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
-
+            if (zzz <= 28) {
+                document.querySelector(" .date .n1 ").innerHTML = zzz;
+                zzz++;
             } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n6").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n6 ").innerHTML = zzz;
-                    zzz++;
-                }
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n1 ").innerHTML = zzz;
+                zzz++;
             }
         }
-        // sixth date box end
-        if (z < 7) {
-            document.querySelector(".week6").innerHTML = week[z];
-            console.log(z);
-            console.log(week[z]);
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n7 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n7 ").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 2) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n7 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n7 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n7 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n7 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
 
-            } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n7").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n7 ").innerHTML = zzz;
-                    zzz++;
-                }
-            }
-
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n1 ").innerHTML = zzz;
+            zzz++;
         } else {
-            z = 0;
-            console.log(z);
-            console.log(week[z]);
-            document.querySelector(".week6").innerHTML = week[z];
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n7 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n7 ").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n7 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n7 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n7 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n7 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
-
-            } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n7").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n7 ").innerHTML = zzz;
-                    zzz++;
-                }
-            }
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n1 ").innerHTML = zzz;
+            zzz++;
         }
-        //seventh date box end
-        if (z < 7) {
-            document.querySelector(".week7").innerHTML = week[z];
-            console.log(z);
-            console.log(week[z]);
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n8 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n8").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n8 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n8 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n8 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n8 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
-
+    }
+}
+document.querySelector(".date .month").innerHTML = months[zz]
+    // first date box end
+if (z < 7) {
+    document.querySelector(".week1").innerHTML = week[z];
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n2 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n2 ").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n2 ").innerHTML = zzz;
+                zzz++;
             } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n8").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n8 ").innerHTML = zzz;
-                    zzz++;
-                }
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n2 ").innerHTML = zzz;
+                zzz++;
             }
         } else {
-            z = 0;
-            console.log(z);
-            console.log(week[z]);
-            document.querySelector(".week7").innerHTML = week[z];
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n8 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n8").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n8 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n8 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n8 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n8 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
-
+            if (zzz <= 28) {
+                document.querySelector(" .date .n2 ").innerHTML = zzz;
+                zzz++;
             } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n8").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n8 ").innerHTML = zzz;
-                    zzz++;
-                }
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n2 ").innerHTML = zzz;
+                zzz++;
             }
         }
-        //8th date box end
-        if (z < 7) {
-            document.querySelector(".week8").innerHTML = week[z];
-            console.log(z);
-            console.log(week[z]);
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n9 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n9").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n9 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n9 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n9 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n9 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
 
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n2 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n2 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+
+} else {
+    z = 0;
+    document.querySelector(".week1").innerHTML = week[z];
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n2 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n2 ").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n2 ").innerHTML = zzz;
+                zzz++;
             } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n9").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n9 ").innerHTML = zzz;
-                    zzz++;
-                }
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n2 ").innerHTML = zzz;
+                zzz++;
             }
         } else {
-            z = 0;
-            console.log(z);
-            console.log(week[z]);
-            document.querySelector(".week8").innerHTML = week[z];
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n9 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n9").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 2) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n9 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n9 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n9 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n9 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
-
+            if (zzz <= 28) {
+                document.querySelector(" .date .n2 ").innerHTML = zzz;
+                zzz++;
             } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n9").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n9 ").innerHTML = zzz;
-                    zzz++;
-                }
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n2 ").innerHTML = zzz;
+                zzz++;
             }
         }
-        //9th date box end
-        if (z < 7) {
-            document.querySelector(".week9").innerHTML = week[z];
-            console.log(z);
-            console.log(week[z]);
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n10 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n10").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n10 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n10 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n10 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n10 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
 
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n2").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n2 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+}
+document.querySelector(".date .month1").innerHTML = months[zz];
+
+// second box date end
+if (z < 7) {
+    document.querySelector(".week2").innerHTML = week[z];
+    console.log(z);
+    console.log(week[z]);
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n3 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n3 ").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n3 ").innerHTML = zzz;
+                zzz++;
             } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n10").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n10 ").innerHTML = zzz;
-                    zzz++;
-                }
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n3 ").innerHTML = zzz;
+                zzz++;
             }
         } else {
-            z = 0;
-            console.log(z);
-            console.log(week[z]);
-            document.querySelector(".week9").innerHTML = week[z];
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n10 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n10").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n10 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n10 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n10 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n10 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
-
+            if (zzz <= 28) {
+                document.querySelector(" .date .n3 ").innerHTML = zzz;
+                zzz++;
             } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n10").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n10 ").innerHTML = zzz;
-                    zzz++;
-                }
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n3 ").innerHTML = zzz;
+                zzz++;
             }
         }
-        //10th date box end
-        if (z < 7) {
-            document.querySelector(".week10").innerHTML = week[z];
-            console.log(z);
-            console.log(week[z]);
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n11 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n11").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n11 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n11 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n11 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n11 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
 
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n3").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n3 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+} else {
+    z = 0;
+    document.querySelector(".week2").innerHTML = week[z];
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n3 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .3 ").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n3 ").innerHTML = zzz;
+                zzz++;
             } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n11").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n11 ").innerHTML = zzz;
-                    zzz++;
-                }
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n3 ").innerHTML = zzz;
+                zzz++;
             }
         } else {
-            z = 0;
-            console.log(z);
-            console.log(week[z]);
-            document.querySelector(".week10").innerHTML = week[z];
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n11 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n11").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 2) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n11 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n11 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n11 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n11 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
-
+            if (zzz <= 28) {
+                document.querySelector(" .date .n3 ").innerHTML = zzz;
+                zzz++;
             } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n11").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n11 ").innerHTML = zzz;
-                    zzz++;
-                }
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n3 ").innerHTML = zzz;
+                zzz++;
             }
         }
-        if (z < 7) {
-            document.querySelector(".week11").innerHTML = week[z];
-            console.log(z);
-            console.log(week[z]);
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n12 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n12").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n12 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n12 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n12 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n12 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
 
-            } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n12").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n12 ").innerHTML = zzz;
-                    zzz++;
-                }
-            }
-
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n3").innerHTML = zzz;
+            zzz++;
         } else {
-            z = 0;
-            console.log(z);
-            console.log(week[z]);
-            document.querySelector(".week11").innerHTML = week[z];
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n12 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n12").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n12 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n12 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n12 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n12 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
-
-            } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n12").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n12 ").innerHTML = zzz;
-                    zzz++;
-                }
-            }
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n3 ").innerHTML = zzz;
+            zzz++;
         }
-        //11th date box end
-        if (z < 7) {
-            document.querySelector(".week12").innerHTML = week[z];
-            console.log(z);
-            console.log(week[z]);
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n13 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n13").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n13 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n13 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n13 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n13 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
+    }
 
+}
+document.querySelector(".date .month2").innerHTML = months[zz];
+
+// third date box end
+if (z < 7) {
+    document.querySelector(".week3").innerHTML = week[z];
+    console.log(z);
+    console.log(week[z]);
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n4 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n4 ").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n4 ").innerHTML = zzz;
+                zzz++;
             } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n13").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n13 ").innerHTML = zzz;
-                    zzz++;
-                }
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .4 ").innerHTML = zzz;
+                zzz++;
             }
         } else {
-            z = 0;
-            console.log(z);
-            console.log(week[z]);
-            document.querySelector(".week12").innerHTML = week[z];
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n13 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n13").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n13 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n13 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n13 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n13 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
-
+            if (zzz <= 28) {
+                document.querySelector(" .date .n4 ").innerHTML = zzz;
+                zzz++;
             } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n13").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n13 ").innerHTML = zzz;
-                    zzz++;
-                }
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n4 ").innerHTML = zzz;
+                zzz++;
             }
         }
-        //12th datebox end
-        if (z < 7) {
-            document.querySelector(".week13").innerHTML = week[z];
-            console.log(z);
-            console.log(week[z]);
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n14 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n14").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n14 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n14 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n14 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n14 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
 
-            } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n14").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n14 ").innerHTML = zzz;
-                    zzz++;
-                }
-            }
-
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n4").innerHTML = zzz;
+            zzz++;
         } else {
-            z = 0;
-            console.log(z);
-            console.log(week[z]);
-            document.querySelector(".week13").innerHTML = week[z];
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n14 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n14").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n14 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n14 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n14 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n14 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
-
-            } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n14").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n14 ").innerHTML = zzz;
-                    zzz++;
-                }
-            }
-
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n4 ").innerHTML = zzz;
+            zzz++;
         }
-        //13th date box end
-        if (z < 7) {
-            document.querySelector(".week14").innerHTML = week[z];
-            console.log(z);
-            console.log(week[z]);
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n15 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n15").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n15 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n15 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n15 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n15 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
+    }
 
+} else {
+    z = 0;
+    document.querySelector(".week3").innerHTML = week[z];
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n4 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n4 ").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n4 ").innerHTML = zzz;
+                zzz++;
             } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n15").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n15 ").innerHTML = zzz;
-                    zzz++;
-                }
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n4 ").innerHTML = zzz;
+                zzz++;
             }
         } else {
-            z = 0;
-            console.log(z);
-            console.log(week[z]);
-            document.querySelector(".week14").innerHTML = week[z];
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n15 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n15").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n15 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n15 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n15 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n15 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
-
+            if (zzz <= 28) {
+                document.querySelector(" .date .n4 ").innerHTML = zzz;
+                zzz++;
             } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n15").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n15 ").innerHTML = zzz;
-                    zzz++;
-                }
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n4 ").innerHTML = zzz;
+                zzz++;
             }
         }
-        //14th date box end
-        if (z < 7) {
-            document.querySelector(".week15").innerHTML = week[z];
-            console.log(z);
-            console.log(week[z]);
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n16 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n16").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n16 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n16 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n16 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n16 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
 
-            } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n16").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n16 ").innerHTML = zzz;
-                    zzz++;
-                }
-            }
-
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n4").innerHTML = zzz;
+            zzz++;
         } else {
-            z = 0;
-            console.log(z);
-            console.log(week[z]);
-            document.querySelector(".week15").innerHTML = week[z];
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n16 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n16").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n16 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n16 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n16 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n16 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
-
-            } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n16").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n16 ").innerHTML = zzz;
-                    zzz++;
-                }
-            }
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n4 ").innerHTML = zzz;
+            zzz++;
         }
-        //15th date box end
-        if (z < 7) {
-            document.querySelector(".week16").innerHTML = week[z];
-            console.log(z);
-            console.log(week[z]);
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n17 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n17").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n17 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n17 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n17 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n17 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
+    }
+}
+document.querySelector(".date .month3").innerHTML = months[zz];
 
+// fourth date box end
+if (z < 7) {
+    document.querySelector(".week4").innerHTML = week[z];
+    console.log(z);
+    console.log(week[z]);
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n5 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n5 ").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n5 ").innerHTML = zzz;
+                zzz++;
             } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n17").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n17 ").innerHTML = zzz;
-                    zzz++;
-                }
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n5 ").innerHTML = zzz;
+                zzz++;
             }
         } else {
-            z = 0;
-            console.log(z);
-            console.log(week[z]);
-            document.querySelector(".week16").innerHTML = week[z];
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n17 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n17").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n17 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n17 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n17 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n17 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
-
+            if (zzz <= 28) {
+                document.querySelector(" .date .n5 ").innerHTML = zzz;
+                zzz++;
             } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n17").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n17 ").innerHTML = zzz;
-                    zzz++;
-                }
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n5 ").innerHTML = zzz;
+                zzz++;
             }
         }
-        //16th date box end
-        if (z < 7) {
-            document.querySelector(".week17").innerHTML = week[z];
-            console.log(z);
-            console.log(week[z]);
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n18 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n18").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n18 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n18 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n18 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n18 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
 
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n5").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n5 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+
+} else {
+    z = 0;
+    document.querySelector(".week4").innerHTML = week[z];
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n5 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n5 ").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n5 ").innerHTML = zzz;
+                zzz++;
             } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n18").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n18 ").innerHTML = zzz;
-                    zzz++;
-                }
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n5 ").innerHTML = zzz;
+                zzz++;
             }
         } else {
-            z = 0;
-            console.log(z);
-            console.log(week[z]);
-            document.querySelector(".week17").innerHTML = week[z];
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n18 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n18").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 2) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n18 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n18 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n18 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n18 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
-
+            if (zzz <= 28) {
+                document.querySelector(" .date .n5 ").innerHTML = zzz;
+                zzz++;
             } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n18").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n18 ").innerHTML = zzz;
-                    zzz++;
-                }
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n5 ").innerHTML = zzz;
+                zzz++;
             }
         }
-        //17t dte box end
 
-
-        // departure calendar js
-
-
-
-
-
-
-
-
-
-
-        document.querySelector(".date .month").innerHTML = months[zz];
-        document.querySelector(".date .month1").innerHTML = months[zz];
-        document.querySelector(".date .month2").innerHTML = months[zz];
-        document.querySelector(".date .month3").innerHTML = months[zz];
-        document.querySelector(".date .month4").innerHTML = months[zz];
-        document.querySelector(".date .month5").innerHTML = months[zz];
-        document.querySelector(".date .month6").innerHTML = months[zz];
-        document.querySelector(".date .month7").innerHTML = months[zz];
-        document.querySelector(".date .month8").innerHTML = months[zz];
-        document.querySelector(".date .month9").innerHTML = months[zz];
-        document.querySelector(".date .month10").innerHTML = months[zz];
-        document.querySelector(".date .month11").innerHTML = months[zz];
-        document.querySelector(".date .month12").innerHTML = months[zz];
-        document.querySelector(".date .month13").innerHTML = months[zz];
-        document.querySelector(".date .month14").innerHTML = months[zz];
-        document.querySelector(".date .month15").innerHTML = months[zz];
-        document.querySelector(".date .month16").innerHTML = months[zz];
-        document.querySelector(".date .month17").innerHTML = months[zz];
-
-
-        //return date
-
-        zzz = day + 1;
-        zz = month;
-        z = weeks + 1;
-
-        // first date box end
-        if (z < 7) {
-            document.querySelector(".week110").innerHTML = week[z];
-            z++;
-            console.log(z);
-            console.log(week[z]);
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-
-                    document.querySelector(" .date .n21 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n21 ").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n21 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n21 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n21 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n21 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
-
-            } else {
-                if (zzz <= 30) {
-
-                    document.querySelector(" .date .n21").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n21 ").innerHTML = zzz;
-                    zzz++;
-                }
-            }
-
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n5").innerHTML = zzz;
+            zzz++;
         } else {
-            z = 0;
-            document.querySelector(".week11").innerHTML = week[z];
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n21 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n21 ").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n21 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n21 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n21 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n21 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
-
-            } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n21").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n21 ").innerHTML = zzz;
-                    zzz++;
-                }
-            }
+            zzz = 1;
+            zz = zz + 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n5 ").innerHTML = zzz;
+            zzz++;
         }
-        // second box date end
-        if (z < 7) {
-            document.querySelector(".week21").innerHTML = week[z];
-            console.log(z);
-            console.log(week[z]);
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n31 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n31 ").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n31 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n3 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n31 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n31 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
+    }
+}
+document.querySelector(".date .month5").innerHTML = months[zz];
 
+// fifth date box end
+if (z < 7) {
+    document.querySelector(".week5").innerHTML = week[z];
+    console.log(z);
+    console.log(week[z]);
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n6 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n6 ").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n6 ").innerHTML = zzz;
+                zzz++;
             } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n31").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n31 ").innerHTML = zzz;
-                    zzz++;
-                }
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n6 ").innerHTML = zzz;
+                zzz++;
             }
         } else {
-            z = 0;
-            document.querySelector(".week21").innerHTML = week[z];
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n31 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .31 ").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n31 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n31 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n31 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n31 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
-
+            if (zzz <= 28) {
+                document.querySelector(" .date .n6 ").innerHTML = zzz;
+                zzz++;
             } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n31").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n31 ").innerHTML = zzz;
-                    zzz++;
-                }
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n6 ").innerHTML = zzz;
+                zzz++;
             }
-
         }
-        // third date box end
-        if (z < 7) {
-            document.querySelector(".week31").innerHTML = week[z];
-            console.log(z);
-            console.log(week[z]);
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n41 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n41 ").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n41 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .41 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n41 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n41 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
 
-            } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n41").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n41 ").innerHTML = zzz;
-                    zzz++;
-                }
-            }
-
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n6").innerHTML = zzz;
+            zzz++;
         } else {
-            z = 0;
-            document.querySelector(".week31").innerHTML = week[z];
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n41 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n41 ").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n41 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n41 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n41 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n41 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
-
-            } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n41").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n41 ").innerHTML = zzz;
-                    zzz++;
-                }
-            }
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n6 ").innerHTML = zzz;
+            zzz++;
         }
-        // fourth date box end
-        if (z < 7) {
-            document.querySelector(".week41").innerHTML = week[z];
-            console.log(z);
-            console.log(week[z]);
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n51 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n51 ").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n51 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n51 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n51 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n51 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
-
-            } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n51").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n51 ").innerHTML = zzz;
-                    zzz++;
-                }
-            }
-
+    }
+} else {
+    z = 0;
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n6 ").innerHTML = zzz;
+            zzz++;
         } else {
-            z = 0;
-            document.querySelector(".week41").innerHTML = week[z];
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n51 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n51 ").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n51 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n51 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n51 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n51 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
-
-            } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n51").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n51 ").innerHTML = zzz;
-                    zzz++;
-                }
-            }
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n6 ").innerHTML = zzz;
+            zzz++;
         }
-        // fifth date box end
-        if (z < 7) {
-            document.querySelector(".week51").innerHTML = week[z];
-            console.log(z);
-            console.log(week[z]);
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n61 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n61 ").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n61 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n61 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n61 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n61 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
-
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n6 ").innerHTML = zzz;
+                zzz++;
             } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n61").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n61 ").innerHTML = zzz;
-                    zzz++;
-                }
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n6 ").innerHTML = zzz;
+                zzz++;
             }
         } else {
-            z = 0;
-            document.querySelector(".week51").innerHTML = week[z];
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n61 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n61 ").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n61 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n61 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n61 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n61 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
-
+            if (zzz <= 28) {
+                document.querySelector(" .date .n6 ").innerHTML = zzz;
+                zzz++;
             } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n61").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n61 ").innerHTML = zzz;
-                    zzz++;
-                }
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n6 ").innerHTML = zzz;
+                zzz++;
             }
         }
-        // sixth date box end
-        if (z < 7) {
-            document.querySelector(".week61").innerHTML = week[z];
-            console.log(z);
-            console.log(week[z]);
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n71 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n71 ").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 2) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n71 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n71 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n71 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n71 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
 
-            } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n71").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n71 ").innerHTML = zzz;
-                    zzz++;
-                }
-            }
-
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n6").innerHTML = zzz;
+            zzz++;
         } else {
-            z = 0;
-            console.log(z);
-            console.log(week[z]);
-            document.querySelector(".week61").innerHTML = week[z];
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n71 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n71 ").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n71 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n71 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n71 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n71 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
-
-            } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n71").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n71 ").innerHTML = zzz;
-                    zzz++;
-                }
-            }
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n6 ").innerHTML = zzz;
+            zzz++;
         }
-        //seventh date box end
-        if (z < 7) {
-            document.querySelector(".week71").innerHTML = week[z];
-            console.log(z);
-            console.log(week[z]);
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n81 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n81").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n81 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n81 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n81 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n81 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
+    }
+}
+document.querySelector(".week5").innerHTML = week[z];
 
+// sixth date box end
+if (z < 7) {
+    document.querySelector(".week6").innerHTML = week[z];
+    console.log(z);
+    console.log(week[z]);
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n7 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n7 ").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 2) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n7 ").innerHTML = zzz;
+                zzz++;
             } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n81").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n81 ").innerHTML = zzz;
-                    zzz++;
-                }
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n7 ").innerHTML = zzz;
+                zzz++;
             }
         } else {
-            z = 0;
-            console.log(z);
-            console.log(week[z]);
-            document.querySelector(".week71").innerHTML = week[z];
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n81 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n81").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n81").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n81 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n81 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n81 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
-
+            if (zzz <= 28) {
+                document.querySelector(" .date .n7 ").innerHTML = zzz;
+                zzz++;
             } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n81").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n81 ").innerHTML = zzz;
-                    zzz++;
-                }
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n7 ").innerHTML = zzz;
+                zzz++;
             }
         }
-        //8th date box end
-        if (z < 7) {
-            document.querySelector(".week81").innerHTML = week[z];
-            console.log(z);
-            console.log(week[z]);
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n91 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n91").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n91").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n91 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n91 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n91 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
 
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n7").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n7 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+
+} else {
+    z = 0;
+    console.log(z);
+    console.log(week[z]);
+    document.querySelector(".week6").innerHTML = week[z];
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n7 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n7 ").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n7 ").innerHTML = zzz;
+                zzz++;
             } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n91").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n91 ").innerHTML = zzz;
-                    zzz++;
-                }
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n7 ").innerHTML = zzz;
+                zzz++;
             }
         } else {
-            z = 0;
-            console.log(z);
-            console.log(week[z]);
-            document.querySelector(".week81").innerHTML = week[z];
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n91 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n91").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 2) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n91 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n91 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n91 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n91 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
-
+            if (zzz <= 28) {
+                document.querySelector(" .date .n7 ").innerHTML = zzz;
+                zzz++;
             } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n91").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n91 ").innerHTML = zzz;
-                    zzz++;
-                }
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n7 ").innerHTML = zzz;
+                zzz++;
             }
         }
-        //9th date box end
-        if (z < 7) {
-            document.querySelector(".week91").innerHTML = week[z];
-            console.log(z);
-            console.log(week[z]);
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n101 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n101").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n101 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n101 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n101 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n101 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
 
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n7").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n7 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+}
+document.querySelector(".date .month6").innerHTML = months[zz];
+
+//seventh date box end
+if (z < 7) {
+    document.querySelector(".week7").innerHTML = week[z];
+    console.log(z);
+    console.log(week[z]);
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n8 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n8").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n8 ").innerHTML = zzz;
+                zzz++;
             } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n101").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n101 ").innerHTML = zzz;
-                    zzz++;
-                }
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n8 ").innerHTML = zzz;
+                zzz++;
             }
         } else {
-            z = 0;
-            console.log(z);
-            console.log(week[z]);
-            document.querySelector(".week91").innerHTML = week[z];
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n101 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n1011").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n101 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n101 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n101 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n101 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
-
+            if (zzz <= 28) {
+                document.querySelector(" .date .n8 ").innerHTML = zzz;
+                zzz++;
             } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n101").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n101 ").innerHTML = zzz;
-                    zzz++;
-                }
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n8 ").innerHTML = zzz;
+                zzz++;
             }
         }
-        //10th date box end
-        if (z < 7) {
-            document.querySelector(".week101").innerHTML = week[z];
-            console.log(z);
-            console.log(week[z]);
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n111 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n111").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n111 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n111 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n111 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n111 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
 
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n8").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n8 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+} else {
+    z = 0;
+    console.log(z);
+    console.log(week[z]);
+    document.querySelector(".week7").innerHTML = week[z];
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n8 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n8").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n8 ").innerHTML = zzz;
+                zzz++;
             } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n111").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n111 ").innerHTML = zzz;
-                    zzz++;
-                }
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n8 ").innerHTML = zzz;
+                zzz++;
             }
         } else {
-            z = 0;
-            console.log(z);
-            console.log(week[z]);
-            document.querySelector(".week101").innerHTML = week[z];
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n111 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n111").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 2) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n111 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n111 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n111 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n111 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
-
+            if (zzz <= 28) {
+                document.querySelector(" .date .n8 ").innerHTML = zzz;
+                zzz++;
             } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n111").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n111 ").innerHTML = zzz;
-                    zzz++;
-                }
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n8 ").innerHTML = zzz;
+                zzz++;
             }
         }
-        if (z < 7) {
-            document.querySelector(".week111").innerHTML = week[z];
-            console.log(z);
-            console.log(week[z]);
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n121 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n121").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n121 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n121 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n121 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n121 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
 
-            } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n121").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n121 ").innerHTML = zzz;
-                    zzz++;
-                }
-            }
-
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n8").innerHTML = zzz;
+            zzz++;
         } else {
-            z = 0;
-            console.log(z);
-            console.log(week[z]);
-            document.querySelector(".week111").innerHTML = week[z];
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n121 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n121").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n121 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n121 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n121 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n121 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
-
-            } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n121").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n121 ").innerHTML = zzz;
-                    zzz++;
-                }
-            }
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n8 ").innerHTML = zzz;
+            zzz++;
         }
-        //11th date box end
-        if (z < 7) {
-            document.querySelector(".week121").innerHTML = week[z];
-            console.log(z);
-            console.log(week[z]);
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n131 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n131").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n131 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n131 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n131 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n131 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
+    }
+}
+document.querySelector(".date .month7").innerHTML = months[zz];
 
+//8th date box end
+if (z < 7) {
+    document.querySelector(".week8").innerHTML = week[z];
+    console.log(z);
+    console.log(week[z]);
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n9 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n9").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n9 ").innerHTML = zzz;
+                zzz++;
             } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n131").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n131 ").innerHTML = zzz;
-                    zzz++;
-                }
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n9 ").innerHTML = zzz;
+                zzz++;
             }
         } else {
-            z = 0;
-            console.log(z);
-            console.log(week[z]);
-            document.querySelector(".week121").innerHTML = week[z];
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n131 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n131").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n131 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n131 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n131 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n131 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
-
+            if (zzz <= 28) {
+                document.querySelector(" .date .n9 ").innerHTML = zzz;
+                zzz++;
             } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n131").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n131 ").innerHTML = zzz;
-                    zzz++;
-                }
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n9 ").innerHTML = zzz;
+                zzz++;
             }
         }
-        //12th datebox end
-        if (z < 7) {
-            document.querySelector(".week131").innerHTML = week[z];
-            console.log(z);
-            console.log(week[z]);
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n141 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n141").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n141 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n141 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n141 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n141 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
 
-            } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n141").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n141 ").innerHTML = zzz;
-                    zzz++;
-                }
-            }
-
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n9").innerHTML = zzz;
+            zzz++;
         } else {
-            z = 0;
-            console.log(z);
-            console.log(week[z]);
-            document.querySelector(".week131").innerHTML = week[z];
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n141 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n141").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n1411 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n141 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n141 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n141 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
-
-            } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n141").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n141 ").innerHTML = zzz;
-                    zzz++;
-                }
-            }
-
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n9 ").innerHTML = zzz;
+            zzz++;
         }
-        //13th date box end
-        if (z < 7) {
-            document.querySelector(".week141").innerHTML = week[z];
-            console.log(z);
-            console.log(week[z]);
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n151 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n151").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n151 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n151 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n151 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n151 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
-
+    }
+} else {
+    z = 0;
+    console.log(z);
+    console.log(week[z]);
+    document.querySelector(".week8").innerHTML = week[z];
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n9 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n9").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 2) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n9 ").innerHTML = zzz;
+                zzz++;
             } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n151").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n151 ").innerHTML = zzz;
-                    zzz++;
-                }
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n9 ").innerHTML = zzz;
+                zzz++;
             }
         } else {
-            z = 0;
-            console.log(z);
-            console.log(week[z]);
-            document.querySelector(".week141").innerHTML = week[z];
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n151 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n151").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n151 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n151 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n151 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n151 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
-
+            if (zzz <= 28) {
+                document.querySelector(" .date .n9 ").innerHTML = zzz;
+                zzz++;
             } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n151").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n151 ").innerHTML = zzz;
-                    zzz++;
-                }
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n9 ").innerHTML = zzz;
+                zzz++;
             }
         }
-        //14th date box end
-        if (z < 7) {
-            document.querySelector(".week151").innerHTML = week[z];
-            console.log(z);
-            console.log(week[z]);
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n161 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n161").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n161 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n161 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n161 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n161 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
 
-            } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n161").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n161 ").innerHTML = zzz;
-                    zzz++;
-                }
-            }
-
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n9").innerHTML = zzz;
+            zzz++;
         } else {
-            z = 0;
-            console.log(z);
-            console.log(week[z]);
-            document.querySelector(".week151").innerHTML = week[z];
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n161 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n161").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n161 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n161 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n161 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n161 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
-
-            } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n161").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n161 ").innerHTML = zzz;
-                    zzz++;
-                }
-            }
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n9 ").innerHTML = zzz;
+            zzz++;
         }
-        //15th date box end
-        if (z < 7) {
-            document.querySelector(".week161").innerHTML = week[z];
-            console.log(z);
-            console.log(week[z]);
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n171 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n171").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n171 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n171 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n171 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n171 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
+    }
+}
+document.querySelector(".date .month8").innerHTML = months[zz];
 
+//9th date box end
+if (z < 7) {
+    document.querySelector(".week9").innerHTML = week[z];
+    console.log(z);
+    console.log(week[z]);
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n10 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n10").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n10 ").innerHTML = zzz;
+                zzz++;
             } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n171").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n171 ").innerHTML = zzz;
-                    zzz++;
-                }
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n10 ").innerHTML = zzz;
+                zzz++;
             }
         } else {
-            z = 0;
-            console.log(z);
-            console.log(week[z]);
-            document.querySelector(".week161").innerHTML = week[z];
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n171 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n171").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n171 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n171 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n171 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n171 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
-
+            if (zzz <= 28) {
+                document.querySelector(" .date .n10 ").innerHTML = zzz;
+                zzz++;
             } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n171").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n171 ").innerHTML = zzz;
-                    zzz++;
-                }
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n10 ").innerHTML = zzz;
+                zzz++;
             }
         }
-        //16th date box end
-        if (z < 7) {
-            document.querySelector(".week171").innerHTML = week[z];
-            console.log(z);
-            console.log(week[z]);
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n181 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n181").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 1) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n181 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n181 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n181 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n181 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
 
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n10").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n10 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+} else {
+    z = 0;
+    console.log(z);
+    console.log(week[z]);
+    document.querySelector(".week9").innerHTML = week[z];
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n10 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n10").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n10 ").innerHTML = zzz;
+                zzz++;
             } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n181").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n181 ").innerHTML = zzz;
-                    zzz++;
-                }
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n10 ").innerHTML = zzz;
+                zzz++;
             }
         } else {
-            z = 0;
-            console.log(z);
-            console.log(week[z]);
-            document.querySelector(".week171").innerHTML = week[z];
-            z++;
-            if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
-                if (zzz <= 31) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n181 ").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n181").innerHTML = zzz;
-                    zzz++;
-                }
-            } else if (zz == 2) {
-                if (zzzz / 4 == 0) {
-                    if (zzz <= 29) {
-                        document.querySelector(" .date .n181 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n181 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                } else {
-                    if (zzz <= 28) {
-                        document.querySelector(" .date .n181 ").innerHTML = zzz;
-                        zzz++;
-                    } else {
-                        zzz = 1;
-                        document.querySelector(" .date .n181 ").innerHTML = zzz;
-                        zzz++;
-                    }
-                }
-
+            if (zzz <= 28) {
+                document.querySelector(" .date .n10 ").innerHTML = zzz;
+                zzz++;
             } else {
-                if (zzz <= 30) {
-                    console.log(zz);
-                    console.log(zzz);
-                    document.querySelector(" .date .n181").innerHTML = zzz;
-                    zzz++;
-                } else {
-                    zzz = 1;
-                    document.querySelector(" .date .n181 ").innerHTML = zzz;
-                    zzz++;
-                }
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n10 ").innerHTML = zzz;
+                zzz++;
             }
         }
-        //17t dte box end
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n10").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n10 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+}
+document.querySelector(".date .month9").innerHTML = months[zz];
+
+//10th date box end
+if (z < 7) {
+    document.querySelector(".week10").innerHTML = week[z];
+    console.log(z);
+    console.log(week[z]);
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n11 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n11").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n11 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n11 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n11 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n11 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n11").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n11 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+} else {
+    z = 0;
+    console.log(z);
+    console.log(week[z]);
+    document.querySelector(".week10").innerHTML = week[z];
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n11 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n11").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 2) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n11 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n11 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n11 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n11 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n11").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n11 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+}
+document.querySelector(".date .month11").innerHTML = months[zz];
+
+if (z < 7) {
+    document.querySelector(".week11").innerHTML = week[z];
+    console.log(z);
+    console.log(week[z]);
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n12 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n12").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n12 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n12 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n12 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n12 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n12").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n12 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+
+} else {
+    z = 0;
+    console.log(z);
+    console.log(week[z]);
+    document.querySelector(".week11").innerHTML = week[z];
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n12 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n12").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n12 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n12 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n12 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n12 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n12").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n12 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+}
+document.querySelector(".date .month11").innerHTML = months[zz];
+
+//11th date box end
+if (z < 7) {
+    document.querySelector(".week12").innerHTML = week[z];
+    console.log(z);
+    console.log(week[z]);
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n13 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n13").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n13 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n13 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n13 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n13 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n13").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n13 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+} else {
+    z = 0;
+    console.log(z);
+    console.log(week[z]);
+    document.querySelector(".week12").innerHTML = week[z];
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n13 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n13").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n13 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n13 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n13 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n13 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n13").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n13 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+}
+document.querySelector(".date .month12").innerHTML = months[zz];
+
+//12th datebox end
+if (z < 7) {
+    document.querySelector(".week13").innerHTML = week[z];
+    console.log(z);
+    console.log(week[z]);
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n14 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n14").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n14 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n14 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n14 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n14 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n14").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n14 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+
+} else {
+    z = 0;
+    console.log(z);
+    console.log(week[z]);
+    document.querySelector(".week13").innerHTML = week[z];
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n14 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n14").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n14 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n14 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n14 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n14 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n14").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n14 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+
+}
+document.querySelector(".date .month13").innerHTML = months[zz];
+
+//13th date box end
+if (z < 7) {
+    document.querySelector(".week14").innerHTML = week[z];
+    console.log(z);
+    console.log(week[z]);
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n15 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n15").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n15 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n15 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n15 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n15 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n15").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n15 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+} else {
+    z = 0;
+    console.log(z);
+    console.log(week[z]);
+    document.querySelector(".week14").innerHTML = week[z];
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n15 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n15").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n15 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n15 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n15 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n15 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n15").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n15 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+}
+document.querySelector(".date .month14").innerHTML = months[zz];
+
+//14th date box end
+if (z < 7) {
+    document.querySelector(".week15").innerHTML = week[z];
+    console.log(z);
+    console.log(week[z]);
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n16 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n16").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n16 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n16 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n16 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n16 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n16").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n16 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+
+} else {
+    z = 0;
+    console.log(z);
+    console.log(week[z]);
+    document.querySelector(".week15").innerHTML = week[z];
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n16 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n16").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n16 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n16 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n16 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                document.querySelector(" .date .n16 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n16").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n16 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+}
+document.querySelector(".date .month15").innerHTML = months[zz];
+
+//15th date box end
+if (z < 7) {
+    document.querySelector(".week16").innerHTML = week[z];
+    console.log(z);
+    console.log(week[z]);
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n17 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n17").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n17 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n17 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n17 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n17 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n17").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n17 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+} else {
+    z = 0;
+    console.log(z);
+    console.log(week[z]);
+    document.querySelector(".week16").innerHTML = week[z];
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n17 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n17").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n17 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n17 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n17 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n17 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n17").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n17 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+}
+document.querySelector(".date .month16").innerHTML = months[zz];
+
+//16th date box end
+if (z < 7) {
+    document.querySelector(".week17").innerHTML = week[z];
+    console.log(z);
+    console.log(week[z]);
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n18 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n18").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n18 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n18 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n18 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n18 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n18").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n18 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+} else {
+    z = 0;
+    console.log(z);
+    console.log(week[z]);
+    document.querySelector(".week17").innerHTML = week[z];
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n18 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n18").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 2) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n18 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n18 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n18 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n18 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n18").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n18 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+}
+document.querySelector(".date .month17").innerHTML = months[zz];
+
+//17t dte box end
 
 
-        // departure calendar js
+// departure calendar js
 
 
 
@@ -4502,25 +2924,1902 @@
 
 
 
-        document.querySelector(".date .month110").innerHTML = months[zz];
-        document.querySelector(".date .month21").innerHTML = months[zz];
-        document.querySelector(".date .month31").innerHTML = months[zz];
-        document.querySelector(".date .month41").innerHTML = months[zz];
-        document.querySelector(".date .month51").innerHTML = months[zz];
-        document.querySelector(".date .month61").innerHTML = months[zz];
-        document.querySelector(".date .month71").innerHTML = months[zz];
-        document.querySelector(".date .month81").innerHTML = months[zz];
-        document.querySelector(".date .month91").innerHTML = months[zz];
-        document.querySelector(".date .month101").innerHTML = months[zz];
-        document.querySelector(".date .month111").innerHTML = months[zz];
-        document.querySelector(".date .month121").innerHTML = months[zz];
-        document.querySelector(".date .month131").innerHTML = months[zz];
-        document.querySelector(".date .month141").innerHTML = months[zz];
-        document.querySelector(".date .month151").innerHTML = months[zz];
-        document.querySelector(".date .month161").innerHTML = months[zz];
-        document.querySelector(".date .month171").innerHTML = months[zz];
-    </script>
 
+
+//return date
+
+zzz = day + 1;
+zz = month;
+z = weeks + 1;
+
+// first date box end
+if (z < 7) {
+    document.querySelector(".week110").innerHTML = week[z];
+    z++;
+    console.log(z);
+    console.log(week[z]);
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+
+            document.querySelector(" .date .n21 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n21 ").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n21 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n21 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n21 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n21 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+
+            document.querySelector(" .date .n21").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n21 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+
+} else {
+    z = 0;
+    document.querySelector(".week11").innerHTML = week[z];
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n21 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n21 ").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n21 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n21 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n21 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n21 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n21").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n21 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+}
+document.querySelector(".date .month110").innerHTML = months[zz];
+
+// second box date end
+if (z < 7) {
+    document.querySelector(".week21").innerHTML = week[z];
+    console.log(z);
+    console.log(week[z]);
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n31 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n31 ").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n31 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n3 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n31 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n31 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n31").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n31 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+} else {
+    z = 0;
+    document.querySelector(".week21").innerHTML = week[z];
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n31 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .31 ").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n31 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n31 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n31 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n31 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n31").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n31 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+
+}
+document.querySelector(".date .month21").innerHTML = months[zz];
+
+// second date box end
+if (z < 7) {
+    document.querySelector(".week31").innerHTML = week[z];
+    console.log(z);
+    console.log(week[z]);
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n41 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n41 ").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n41 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .41 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n41 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n41 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n41").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n41 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+
+} else {
+    z = 0;
+    document.querySelector(".week31").innerHTML = week[z];
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n41 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n41 ").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n41 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n41 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n41 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n41 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n41").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n41 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+}
+document.querySelector(".date .month31").innerHTML = months[zz];
+
+// fourth date box end
+if (z < 7) {
+    document.querySelector(".week41").innerHTML = week[z];
+    console.log(z);
+    console.log(week[z]);
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n51 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n51 ").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n51 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n51 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n51 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n51 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n51").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n51 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+
+} else {
+    z = 0;
+    document.querySelector(".week41").innerHTML = week[z];
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n51 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n51 ").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n51 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n51 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n51 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n51 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n51").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n51 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+}
+document.querySelector(".date .month41").innerHTML = months[zz];
+
+// date box end
+if (z < 7) {
+    document.querySelector(".week51").innerHTML = week[z];
+    console.log(z);
+    console.log(week[z]);
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n61 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n61 ").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n61 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n61 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n61 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n61 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n61").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n61 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+} else {
+    z = 0;
+    document.querySelector(".week51").innerHTML = week[z];
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n61 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n61 ").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n61 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n61 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n61 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n61 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n61").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n61 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+}
+document.querySelector(".date .month51").innerHTML = months[zz];
+
+//  date box end
+if (z < 7) {
+    document.querySelector(".week61").innerHTML = week[z];
+    console.log(z);
+    console.log(week[z]);
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n71 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n71 ").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 2) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n71 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n71 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n71 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n71 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n71").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n71 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+
+} else {
+    z = 0;
+    console.log(z);
+    console.log(week[z]);
+    document.querySelector(".week61").innerHTML = week[z];
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n71 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n71 ").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n71 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n71 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n71 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n71 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n71").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n71 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+}
+document.querySelector(".date .month61").innerHTML = months[zz];
+
+// date box end
+if (z < 7) {
+    document.querySelector(".week71").innerHTML = week[z];
+    console.log(z);
+    console.log(week[z]);
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n81 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n81").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n81 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n81 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n81 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n81 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n81").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n81 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+} else {
+    z = 0;
+    console.log(z);
+    console.log(week[z]);
+    document.querySelector(".week71").innerHTML = week[z];
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n81 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n81").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n81").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n81 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n81 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n81 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n81").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n81 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+}
+document.querySelector(".date .month71").innerHTML = months[zz];
+
+//date box end
+if (z < 7) {
+    document.querySelector(".week81").innerHTML = week[z];
+    console.log(z);
+    console.log(week[z]);
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n91 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n91").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n91").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n91 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n91 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n91 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n91").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n91 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+} else {
+    z = 0;
+    console.log(z);
+    console.log(week[z]);
+    document.querySelector(".week81").innerHTML = week[z];
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n91 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n91").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 2) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n91 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n91 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n91 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n91 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n91").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n91 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+}
+document.querySelector(".date .month81").innerHTML = months[zz];
+
+// date box end
+if (z < 7) {
+    document.querySelector(".week91").innerHTML = week[z];
+    console.log(z);
+    console.log(week[z]);
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n101 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n101").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n101 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n101 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n101 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n101 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n101").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n101 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+} else {
+    z = 0;
+    console.log(z);
+    console.log(week[z]);
+    document.querySelector(".week91").innerHTML = week[z];
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n101 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n1011").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n101 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n101 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n101 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n101 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n101").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n101 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+}
+document.querySelector(".date .month91").innerHTML = months[zz];
+
+// date box end
+if (z < 7) {
+    document.querySelector(".week101").innerHTML = week[z];
+    console.log(z);
+    console.log(week[z]);
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n111 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n111").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n111 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n111 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n111 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n111 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n111").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n111 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+} else {
+    z = 0;
+    console.log(z);
+    console.log(week[z]);
+    document.querySelector(".week101").innerHTML = week[z];
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n111 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n111").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 2) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n111 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n111 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n111 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n111 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n111").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n111 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+}
+document.querySelector(".date .month101").innerHTML = months[zz];
+//date box end 
+if (z < 7) {
+    document.querySelector(".week111").innerHTML = week[z];
+    console.log(z);
+    console.log(week[z]);
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n121 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n121").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n121 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n121 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n121 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n121 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n121").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n121 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+
+} else {
+    z = 0;
+    console.log(z);
+    console.log(week[z]);
+    document.querySelector(".week111").innerHTML = week[z];
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n121 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n121").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n121 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n121 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n121 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n121 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n121").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n121 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+}
+document.querySelector(".date .month111").innerHTML = months[zz];
+
+//h date box end
+if (z < 7) {
+    document.querySelector(".week121").innerHTML = week[z];
+    console.log(z);
+    console.log(week[z]);
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n131 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n131").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n131 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n131 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n131 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n131 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n131").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n131 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+} else {
+    z = 0;
+    console.log(z);
+    console.log(week[z]);
+    document.querySelector(".week121").innerHTML = week[z];
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n131 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n131").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n131 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n131 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n131 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n131 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n131").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n131 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+}
+document.querySelector(".date .month121").innerHTML = months[zz];
+
+// datebox end
+if (z < 7) {
+    document.querySelector(".week131").innerHTML = week[z];
+    console.log(z);
+    console.log(week[z]);
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n141 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n141").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n141 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n141 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n141 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n141 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n141").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n141 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+
+} else {
+    z = 0;
+    console.log(z);
+    console.log(week[z]);
+    document.querySelector(".week131").innerHTML = week[z];
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n141 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n141").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n1411 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n141 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n141 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n141 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n141").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n141 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+
+}
+document.querySelector(".date .month131").innerHTML = months[zz];
+
+// date box end
+if (z < 7) {
+    document.querySelector(".week141").innerHTML = week[z];
+    console.log(z);
+    console.log(week[z]);
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n151 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n151").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n151 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n151 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n151 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n151 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n151").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n151 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+} else {
+    z = 0;
+    console.log(z);
+    console.log(week[z]);
+    document.querySelector(".week141").innerHTML = week[z];
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n151 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n151").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n151 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n151 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n151 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n151 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n151").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n151 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+}
+document.querySelector(".date .month141").innerHTML = months[zz];
+
+// date box end
+if (z < 7) {
+    document.querySelector(".week151").innerHTML = week[z];
+    console.log(z);
+    console.log(week[z]);
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n161 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n161").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n161 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n161 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n161 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n161 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n161").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n161 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+
+} else {
+    z = 0;
+    console.log(z);
+    console.log(week[z]);
+    document.querySelector(".week151").innerHTML = week[z];
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n161 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n161").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n161 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n161 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n161 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n161 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n161").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n161 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+}
+document.querySelector(".date .month151").innerHTML = months[zz];
+
+// date box end
+if (z < 7) {
+    document.querySelector(".week161").innerHTML = week[z];
+    console.log(z);
+    console.log(week[z]);
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n171 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n171").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n171 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n171 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n171 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n171 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n171").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n171 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+} else {
+    z = 0;
+    console.log(z);
+    console.log(week[z]);
+    document.querySelector(".week161").innerHTML = week[z];
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n171 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n171").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n171 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n171 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n171 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n171 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n171").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n171 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+}
+document.querySelector(".date .month161").innerHTML = months[zz];
+
+// date box end
+if (z < 7) {
+    document.querySelector(".week171").innerHTML = week[z];
+    console.log(z);
+    console.log(week[z]);
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n181 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n181").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 1) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n181 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n181 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n181 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n181 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n181").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n181 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+} else {
+    z = 0;
+    console.log(z);
+    console.log(week[z]);
+    document.querySelector(".week171").innerHTML = week[z];
+    z++;
+    if (zz == 0 || zz == 2 || zz == 4 || zz == 6 || zz == 8 || zz == 10) {
+        if (zzz <= 31) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n181 ").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n181").innerHTML = zzz;
+            zzz++;
+        }
+    } else if (zz == 2) {
+        if (zzzz / 4 == 0) {
+            if (zzz <= 29) {
+                document.querySelector(" .date .n181 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n181 ").innerHTML = zzz;
+                zzz++;
+            }
+        } else {
+            if (zzz <= 28) {
+                document.querySelector(" .date .n181 ").innerHTML = zzz;
+                zzz++;
+            } else {
+                zzz = 1;
+                zz = zz + 1;
+                document.querySelector(" .date .n181 ").innerHTML = zzz;
+                zzz++;
+            }
+        }
+
+    } else {
+        if (zzz <= 30) {
+            console.log(zz);
+            console.log(zzz);
+            document.querySelector(" .date .n181").innerHTML = zzz;
+            zzz++;
+        } else {
+            zzz = 1;
+            zz = zz + 1;
+            document.querySelector(" .date .n181 ").innerHTML = zzz;
+            zzz++;
+        }
+    }
+}
+document.querySelector(".date .month171").innerHTML = months[zz];
+
+// dte box end
+
+
+// departure calendar js
+</script>
 
 
 
