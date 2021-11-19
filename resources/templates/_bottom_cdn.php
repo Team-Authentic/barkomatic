@@ -9,3 +9,4 @@
     <script src="js/roberto.bundle.js"></script>
     <!-- Active -->
     <script src="js/default-assets/active.js"></script>
+    <script src="js/default-assets/search-trip/search_trip.js"></script>

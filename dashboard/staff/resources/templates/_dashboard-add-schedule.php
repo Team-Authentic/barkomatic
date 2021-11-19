@@ -39,7 +39,7 @@
                                     if(mysqli_stmt_execute($stmt)) {
                                         $result = mysqli_stmt_get_result($stmt);
                                         if(mysqli_num_rows($result) > 0) {
-                                            while($row = mysqli_fetch_array($result)) { ?>
+                                            while($row = mysqli_fetch_assoc($result)) { ?>
                                                 <tr>
                                                     <td></td>
                                                     <td data-label="date"><?php echo $row['id']; ?></td>
@@ -49,8 +49,11 @@
                                                     <td data-label="port-to"><?php echo $row['port_location_2']; ?></td>
                                                     <td class="actions-cell">
                                                         <div class="buttons right nowrap ">
-                                                            <button type="button" class="button small green" data-toggle="shedule-modal" data-target="#shedule-modal">
-                                                                <span class="icon"><i class="mdi mdi-lead-pencil"></i></span>
+                                                            <button type="button" class="button small green" data-toggle="modal" data-target="#exampleModal">
+                                                                <span class="icon"><i class="mdi mdi-lead-pencil"></i><?php 
+                                                                    $edit_id = $row['id'];
+                                                                //    editID($edit_id, $con);
+                                                                ?></span>
                                                             </button>
                                                             <form id="sched-delete-frm">
                                                                 <input type="text" name="sched_delete_id" value="<?php echo $row['id']; ?>" class="d-none">
@@ -76,6 +79,87 @@
                                 <small>Page 1 of 3</small>
                             </div>
                         </div> -->
+                        
+                                <form id="sched-edit-frm">
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="form-group row d-none">
+                                                        <label for="port-edit-id" class="col-sm-4">Port id</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" name="sched-edit-id" id="sched-edit-id" value="<?php echo $edit_id;?>" class="d-none">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="event-name" class="col-sm-4 control-label">Time</label>
+                                                        <div class="col-sm-8">
+                                                            <input id="depart-time" name="depart-time" type="time" class="form-control" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="min-date" class="col-sm-4 control-label">Date</label>
+                                                        <div class="col-sm-8">
+                                                            <div class="input-group input-daterange" data-provide="datepicker">
+                                                                <input id="min-date" name="event-start-date" type="text" class="form-control">
+                                                                <div class="input-group-prepend input-group-append">
+                                                                    <div class="input-group-text"><i class="mdi mdi-calendar-month"></i></div>
+                                                                </div>
+                                                                <!-- <input name="event-end-date" type="text" class="form-control"> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="port-from" class="col-sm-4 control-label">Port Location 1</label>
+                                                        <div class="col-sm-8">
+                                                            <select class="form-control" id="port-from" name="sched-port-loc-1">
+                                                                <?php
+                                                                    // require "resources/config.php";
+                                                                    $stmt2 = $con->prepare("SELECT port_location_from FROM tbl_ship_port");
+                                                                    if(mysqli_stmt_execute($stmt2)) {
+                                                                        $result = mysqli_stmt_get_result($stmt2);
+                                                                        if(mysqli_num_rows($result) > 0) {
+                                                                            while($row = mysqli_fetch_array($result)) { ?>
+                                                                                <option class="form-control" value="<?php echo $row['port_location_from']; ?>"><?php echo $row['port_location_from']; ?></option>
+                                                                        <?php } 
+                                                                        }
+                                                                    } ?>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="port-to" class="col-sm-4 control-label">Port Location 2</label>
+                                                        <div class="col-sm-8">
+                                                            <select class="form-control" id="port-to" name="sched-port-loc-2">
+                                                                <?php
+                                                                    // require "resources/config.php";
+                                                                    $stmt3 = $con->prepare("SELECT port_location_to FROM tbl_ship_port");
+                                                                    if(mysqli_stmt_execute($stmt3)) {
+                                                                        $result = mysqli_stmt_get_result($stmt3);
+                                                                        if(mysqli_num_rows($result) > 0) {
+                                                                            while($row = mysqli_fetch_array($result)) { ?>
+                                                                                <option class="form-control" value="<?php echo $row['port_location_to']; ?>"><?php echo $row['port_location_to']; ?></option>
+                                                                        <?php } 
+                                                                        }
+                                                                    } ?>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn" data-dismiss="modal">Cancel</button>
+                                                        <button type="submit" id="sched-edit-btn" class="btn btn-primary">Save</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </form>
+                      
                     </div>
                 </div>
             </div>

@@ -47,25 +47,27 @@
                                         <input type="text" name="fname" id="fname" class="form-control" placeholder="First Name *" value="" required>
                                     </div>
                                     <div class="form-group">
+                                        <input type="text" name="mi" id="mi" class="form-control" placeholder="MI *" value="" required>
+                                    </div>
+                                    <div class="form-group">
                                         <input type="text" name="lname" id="lname" class="form-control" placeholder="Last Name *" value="" required>
                                     </div>
                                     <div class="form-group">
-                                        <input type="password" name="pass" id="pass" class="form-control" placeholder="Password *" value="" required>
+                                        <select name="gender" id="gender" class="form-control" required>
+                                            <option value="" disabled selected>Select</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                        </select>
                                     </div>
                                     <div class="form-group">
-                                        <input type="password" name="cpass" id="cpass" class="form-control" placeholder="Confirm Password *" value="" required>
+                                        <select name="gender" id="gender" class="form-control" required>
+                                            <option value="" disabled selected>Select</option>
+                                            <option value="Adult">Adult</option>
+                                            <option value="Minor">Minor</option>
+                                        </select>
                                     </div>
                                     <div class="form-group">
-                                        <div class="maxl">
-                                            <label class="radio inline"> 
-                                                <input type="radio" name="gender" id="male" value="male" checked="" required>
-                                                <span> Male </span> 
-                                            </label>
-                                                <label class="radio inline"> 
-                                                <input type="radio" name="gender" id="female" value="female" required>
-                                                <span>Female </span> 
-                                            </label>
-                                        </div>
+                                        <input type="date" class="form-control" name="dob" id="dob" placeholder="Date of Birth" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -73,21 +75,13 @@
                                         <input type="email" name="email" id="email" class="form-control" placeholder="Your Email *" value="" required>
                                     </div>
                                     <div class="form-group">
-                                        <input type="tel" name="tel" id="tel" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Your Phone *" value="" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <select class="form-control" required>
-                                            <option value="passenger-default-option">Please select your Security Question</option>
-                                            <option>What is your Birthdate?</option>
-                                            <option>What is Your old Phone Number</option>
-                                            <option>What is your Pet Name?</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" name="answer" id="answer" class="form-control" placeholder="Enter Your Answer *" value="" required>
-                                    </div>
-                                    <div class="form-group">
                                         <input type="text" name="uname" id="uname" class="form-control" placeholder="Username *" value="" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="password" id="password" class="form-control" placeholder="Password *" value="" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="confirm-password" id="confirm-password" class="form-control" placeholder="Confirm Password *" value="" required>
                                     </div>
                                     <a href="index.php"><input type="button" class="btnRegister text-center float-left mt-auto bg-light text-dark border border-dark" value="Back"></a>
                                     <input type="submit" name="register" class="btnRegister mt-auto" value="Register" id="register">
@@ -110,9 +104,6 @@
                                         <input type="email" name="email" id="email-shipping" class="form-control" placeholder="Email *" value="" required>
                                     </div>
                                     <div class="form-group">
-                                        <input type="tel" name="tel" id="tel-shipping" maxlength="10" minlength="10" class="form-control" placeholder="Phone * +63" value="" required>
-                                    </div>
-                                    <div class="form-group">
                                         <input type="text" name="uname" id="uname-shipping" class="form-control" placeholder="Username *" value="" required>
                                     </div>
                                 </div>
@@ -123,19 +114,7 @@
                                     <div class="form-group ">
                                         <input type="password" name="cpass" id="cpass-shipping" class="form-control " placeholder="Confirm Password *" required>
                                     </div>
-                                    <div class="form-group ">
-                                        <select class="form-control" required>
-                                            <option>Please select your Sequrity Question</option>
-                                            <option>What is your Birthdate?</option>
-                                            <option>What is Your old Phone Number</option>
-                                            <option>What is your Pet Name?</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group ">
-                                        <input type="text" name="answer" id="answer-shipping" class="form-control " placeholder="Answer *" required>
-                                    </div>
                                     <a href="index.php"><input type="button" class="btnRegister text-center float-left mt-auto bg-light text-dark border border-dark" value="Back"></a>
-
                                     <input type="submit" class="btnRegister text-center mt-auto" name="signup" id="signup" value="Signup">
                                 </div>
                             </div>
@@ -150,8 +129,7 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
-    <script src="js/default-assets/apply/shipping.js"></script>
-    <script src="js/default-assets/apply/passenger.js"></script>
+    <script src="js/default-assets/apply/signup.js"></script>
 </body>
 
 </html>

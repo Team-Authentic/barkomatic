@@ -1,8 +1,7 @@
 
     <!-- Main Header Start -->
     <?php 
-        require("resources/config.php");
-        require(TEMPLATES_PATH . "/_search-trip_header.php");
+        require "resources/templates/_search-trip_header.php";
     ?>
     <!-- Header Area End -->
    <!-- Welcome Area Start -->
@@ -16,14 +15,14 @@
                             <div class="barkomatic-main-section col-12 p-0 pl-5">
                                 <div class="row">
                                     <div class="col-4 pl-5 p-0 pt-5">
-                                        <div class="row border" id="barkomatic-passenger-vehicle">
+                                        <div class="row border-0" id="barkomatic-passenger-vehicle">
                                             <div class="barkomatic-nav barkomatic-nav-active col-6 pr-0 border-right p-2">
                                                 <span><i class="fa fa-user ml-0 mr-2"></i> Passenger</span>
                                             </div>
-                                            <div class="barkomatic-nav col-6 pl-0 text-dark p-2">
+                                            <!-- <div class="barkomatic-nav col-6 pl-0 text-dark p-2">
                                                 <i class="fa fa-truck ml-0 mr-2"></i>
                                                 <span>Vehicle</span>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div>
                                 </div>
@@ -32,6 +31,26 @@
                                         <div class="row">
                                             <div class="col-12 pr-0 text-dark pl-0 pt-4 text-left">
                                                 <span><input type="checkbox" name="" id="preferred-shipping-lines"> <label for="preferred-shipping-lines">Has Preferred Shipping Lines</label></span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-9">
+                                                <div id="preferred-shipping-content" class="row" style="display:none;">
+                                                    <?php 
+                                                        require "resources/config.php";
+                                                        $stmt = $con->prepare("SELECT ship_name,ship_logo FROM tbl_ship_account_detail");
+                                                        if(mysqli_stmt_execute($stmt)) {
+                                                            $result = mysqli_stmt_get_result($stmt);
+                                                            if(mysqli_num_rows($result) > 0) {
+                                                                while($row = mysqli_fetch_assoc($result)) { ?>
+                                                                    <div class="co-5 border">
+                                                                        <?php $img = $row['ship_logo']; ?>
+                                                                        <img src="img/ferrys_logo/<?php echo $img; ?>" alt="<?php echo $row['ship_name']; ?>" title="<?php echo $row['ship_name']; ?>" width="60">
+                                                                    </div>
+                                                            <?php }
+                                                            }
+                                                        } ?>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -149,7 +168,7 @@
 
     <!-- Footer Area Start -->
     <?php 
-        require(TEMPLATES_PATH . "/_bottom_cdn.php");
+        require "resources/templates/_bottom_cdn.php";
     ?>
     <!-- Footer Area End -->
 

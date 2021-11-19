@@ -55,7 +55,7 @@
                                                 <div class="input-group-prepend">
                                                     <div class="input-group-text"><span class="icon is-small left"><i class="fa fa-user small"></i></span></div>
                                                 </div>
-                                                <input type="email" name="email-passenger" id="email-passenger" class="form-control" placeholder="Email *" value="" required>
+                                                <input type="text" name="username-passenger" id="username-passenger" class="form-control" placeholder="Username *" value="" required>
                                             </div>
                                             <div class="form-group input-group">
                                                 <div class="input-group-prepend">
@@ -95,7 +95,7 @@
                                                 <div class="input-group-prepend">
                                                     <div class="input-group-text"><span class="icon is-small left"><i class="fa fa-user small"></i></span></div>
                                                 </div>
-                                                <input type="email" name="email_sh_owner" id="email_sh_owner" class="form-control" placeholder="Email *" value="" required>
+                                                <input type="text" name="username_sh_owner" id="username_sh_owner" class="form-control" placeholder="Username *" value="" required>
                                             </div>
                                             <div class="form-group input-group">
                                                 <div class="input-group-prepend">
@@ -135,13 +135,13 @@
                                                 <div class="input-group-prepend">
                                                     <div class="input-group-text"><span class="icon is-small left"><i class="fa fa-user small"></i></span></div>
                                                 </div>
-                                                <input type="email" name="email" id="email" class="form-control" placeholder="Email *" value="" required>
+                                                <input type="text" name="username-staff" id="username-staff" class="form-control" placeholder="Username *" value="" required>
                                             </div>
                                             <div class="form-group input-group">
                                                 <div class="input-group-prepend">
                                                     <div class="input-group-text"><span class="icon is-small left"><i class="fa fa-asterisk small"></i></span></div>
                                                 </div>
-                                                <input type="password" name="password" id="password" class="form-control" placeholder="Password *" value="" required>
+                                                <input type="password" name="staff-password" id="staff-password" class="form-control" placeholder="Password *" value="" required>
                                             </div>
                                             <input type="submit" name="login" id="login" class="btnRegister float-left mt-3 btn btn-sm text-white" value="Login">
                                             <a href="forgot.html" class="">
